@@ -10,7 +10,7 @@
       <div class="header-top">
 
         <div class="header-logo">
-          <a class="logo-link" href="">
+          <a class="logo-link">
             <img class="logo-pic" src="" alt="" width="" height="">
           </a>
         </div>
@@ -25,13 +25,13 @@
         <div class="user-menu">
           <ul class="user-menu-list">
             <li class="user-menu-item">
-              <a class="user-menu-link" href="#"><span class="user-menu-link-text">Войти</span></a>
+              <a class="user-menu-link" href="#">Войти</a>
             </li>
             <li class="user-menu-item">
-              <a class="user-menu-link" href="#"><span class="user-menu-link-text">Сравнить</span></a>
+              <a class="user-menu-link" href="#">Сравнить</a>
             </li>
             <li class="user-menu-item">
-              <a class="user-menu-link" href="#"><span class="user-menu-link-text">Корзина</span></a>
+              <a class="user-menu-link" href="#">Корзина</a>
             </li>
           </ul>
         </div>
@@ -77,29 +77,105 @@
 
 
     <main>
-      <!--разметить слайдер?article?figure-->
       <section class="promo-slider container">
+        <input type="radio" id="btn-1" name="toggle" checked>
+        <input type="radio" id="btn-2" name="toggle">
+        <input type="radio" id="btn-3" name="toggle">
+
+        <div class="slider-controls">
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+        </div>
+
+        <div class="slider-slides">
+
+          <div class="slider">
+            <figure>
+              <img class="" src="" alt="" width="" height="">
+              <figcaption>
+                <p class="slider-title"><b>Делай селфи,  как Бен Стиллер!</b></p>
+                <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              </figcaption>
+            </figure>
+            <a href="#" class="btn slider-btn">Подробнее</a>
+            <table class="specification">
+              <tr>
+                <td>8,5 м</td>
+                <td>5 кг</td>
+                <td>Карбон</td>
+              </tr>
+               <tr>
+                <td>Длина палки</td>
+                <td>Вес палки</td>
+                <td>Материал</td>
+              </tr>
+            </table>
+          </div>
+
+           <div class="slider">
+            <figure>
+              <img class="" src="" alt="" width="" height="">
+              <figcaption>
+                <p class="slider-title"><b>Худеем правильно!</b></p>
+                <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету</p>
+              </figcaption>
+            </figure>
+            <a href="#" class="btn slider-btn">Подробнее</a>
+            <table class="specification">
+              <tr>
+                <td>48 часов/td>
+              </tr>
+               <tr>
+                <td>Без подзарядки</td>
+              </tr>
+            </table>
+          </div>
+
+           <div class="slider">
+            <figure>
+              <img class="" src="" alt="" width="" height="">
+              <figcaption>
+                <p class="slider-title"><b>Порхает как бабочка, жалит как пчела!</b></p>
+                <p class="slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+              </figcaption>
+            </figure>
+            <a href="#" class="btn slider-btn">Подробнее</a>
+            <table class="specification">
+              <tr>
+                <td>800 м</td>
+                <td>50 м</td>
+              </tr>
+               <tr>
+                <td>Дальность полета</td>
+                <td>Радиус поражения</td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
       </section>
+
 
       <section class="popular container">
         <ul class="popular-list">
           <li class="popular-item">
-            <a href="#" class="popular-link">Виртуальная реальность</a>
+            <a href="#" class="popular-link popular-link-virtual">Виртуальная реальность</a>
           </li>
           <li class="popular-item">
-            <a href="#" class="popular-link">Моноподы для селфи</a>
+            <a href="#" class="popular-link popular-link-monopods">Моноподы для селфи</a>
           </li>
           <li class="popular-item">
-            <a href="#" class="popular-link">Экшн-камеры</a>
+            <a href="#" class="popular-link popular-link-cameras">Экшн-камеры</a>
           </li>
           <li class="popular-item">
-            <a href="#" class="popular-link">Фитнесc-браслеты</a>
+            <a href="#" class="popular-link popular-link-bracelets">Фитнесc-браслеты</a>
           </li>
           <li class="popular-item">
-            <a href="#" class="popular-link">Умные часы</a>
+            <a href="#" class="popular-link popular-link-wathes">Умные часы</a>
           </li>
           <li class="popular-item">
-            <a href="#" class="popular-link">Квадрокоптеры</a>
+            <a href="#" class="popular-link popular-link-quadrocopters">Квадрокоптеры</a>
           </li>
         </ul>
       </section>
@@ -202,13 +278,13 @@
             <div class="user-menu">
               <ul class="user-menu-list">
                 <li class="user-menu-item">
-                  <a class="user-menu-link" href="#"><span class="user-menu-link-text">Войти</span></a>
+                  <a class="user-menu-link" href="#">Войти</a>
                 </li>
                 <li class="user-menu-item">
-                  <a class="user-menu-link" href="#"><span class="user-menu-link-text">Сравнить</span></a>
+                  <a class="user-menu-link" href="#">Сравнить</a>
                 </li>
                 <li class="user-menu-item">
-                  <a class="user-menu-link" href="#"><span class="user-menu-link-text">Корзина</span></a>
+                  <a class="user-menu-link" href="#">Корзина</a>
                 </li>
               </ul>
             </div>
