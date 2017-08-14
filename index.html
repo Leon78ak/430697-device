@@ -16,7 +16,7 @@
         </div>
 
         <div class="header-search">
-          <form class="search-form" action="" method="post">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
             <input type="search" name="search">
             <input type="submit" value="">
           </form>
@@ -78,14 +78,15 @@
 
     <main>
       <section class="promo-slider container">
-        <input type="radio" id="btn-1" name="toggle" checked>
-        <input type="radio" id="btn-2" name="toggle">
-        <input type="radio" id="btn-3" name="toggle">
+        <h2 class="visually-hidden">промо-слайдер</h2>
+        <input type="radio" id="slide-1" name="toggle" checked>
+        <input type="radio" id="slide-2" name="toggle">
+        <input type="radio" id="slide-3" name="toggle">
 
         <div class="slider-controls">
-          <label for="btn-1"></label>
-          <label for="btn-2"></label>
-          <label for="btn-3"></label>
+          <label for="slide-1"></label>
+          <label for="slide-2"></label>
+          <label for="slide-3"></label>
         </div>
 
         <div class="slider-slides">
@@ -124,7 +125,7 @@
             <a href="#" class="btn slider-btn">Подробнее</a>
             <table class="specification">
               <tr>
-                <td>48 часов/td>
+                <td>48 часов</td>
               </tr>
                <tr>
                 <td>Без подзарядки</td>
@@ -158,6 +159,7 @@
 
 
       <section class="popular container">
+        <h2 class="visually-hidden">товары</h2>
         <ul class="popular-list">
           <li class="popular-item">
             <a href="#" class="popular-link popular-link-virtual">Виртуальная реальность</a>
@@ -181,6 +183,7 @@
       </section>
 
       <section class="services">
+        <h2 class="visually-hidden">сервисы</h2>
         <div class="container">
           <input type="radio" id="btn-1" name="toggle" checked>
           <input type="radio" id="btn-2" name="toggle">
@@ -211,6 +214,7 @@
       </section>
 
       <section class="brands container">
+        <h2 class="visually-hidden">производители</h2>
         <ul class="brands-list">
           <li class="brands-item">
             <a href="#" class="brands-link">brand
@@ -293,7 +297,6 @@
           <div class="footer-row">
             <span class="address">г. Москва, ул. Строителей, 15</span>
 
-            <!--подумать о переопределении стилей верхнего и нижнего меню-->
             <div class="page-footer-menu">
               <ul class="page-footer-menu-list">
                 <li class="page-footer-menu-item">
@@ -327,6 +330,58 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="feedback-item">
+          Ваше имя:
+          <input type="text" name="user-name" placeholder="Представьтесь, пожалуйста" required>
+        </p>
+        <p class="feedback-item">
+          Ваш e-mail:
+          <input type="email" name="email" placeholder="Для отправки ответа" required>
+        </p>
+        <p class="feedback-item">
+          Текст письма:
+          <textarea name="letter" rows="10">В свободной форме</textarea>
+        </p>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+      <span class="modal-close">x</span>
+    </section>
+
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <span class="modal-close">x</span>
+    </section>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
