@@ -33,9 +33,18 @@ body {
   color: #000000;
 }
 
-.brands-link img {
-  opacity: 0.2;
+.logo-pic-header {
+  fill: #000000;
 }
+
+.logo-pic-footer {
+  fill: #ffc600;
+}
+
+.brands-pic-grey {
+  display: none;
+}
+
 
 
 

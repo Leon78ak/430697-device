@@ -11,8 +11,18 @@
       <div class="header-top">
 
         <div class="header-logo">
-          <a class="logo-link" href="index.html">
-            <img class="logo-pic" src="img/logo-pic.png" alt="Логотип интернет-магазина DEVICE" width="163" height="36">
+          <a class="logo-link visually-hidden" href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="163" height="36" viewBox="0 0 164 36">
+              <g class="logo-pic-header">
+                <path d="M13.44.67A15.56,15.56,0,0,1,25.08,5.5a16.53,16.53,0,0,1,4.68,12,16.52,16.52,0,0,1-4.68,12,15.56,15.56,0,0,1-11.64,4.82H0V.67Zm0,26.21a8.56,8.56,0,0,0,6.46-2.57,9.45,9.45,0,0,0,2.47-6.84,9.45,9.45,0,0,0-2.47-6.84,8.56,8.56,0,0,0-6.46-2.57H7.68V26.88Z"/>
+                <path d="M42.24,26.88H55.68v7.39H34.56V.67H55.44V8.06H42.24v5.57h12v7.3h-12Z"/>
+                <path d="M68.54,34.27,57.6.67H66l7.44,24.72L80.88.67h8.4L78.34,34.27Z"/>
+                <path d="M92.64.67h7.68v33.6H92.64Z"/>
+                <path d="M122.59,34.94a17.06,17.06,0,0,1-17.47-17.47A17.06,17.06,0,0,1,122.59,0a17.2,17.2,0,0,1,8.35,2.09,15.8,15.8,0,0,1,6,5.69l-6.62,3.84a7.57,7.57,0,0,0-3.17-3,9.79,9.79,0,0,0-4.61-1.08,9.49,9.49,0,0,0-7.13,2.74,10,10,0,0,0-2.66,7.25,10,10,0,0,0,2.66,7.25,9.49,9.49,0,0,0,7.13,2.74,9.75,9.75,0,0,0,4.63-1.1,7.46,7.46,0,0,0,3.14-3L137,27.17a15.45,15.45,0,0,1-6,5.69A17.31,17.31,0,0,1,122.59,34.94Z"/>
+                <path d="M148.75,26.88h13.44v7.39H141.07V.67H162V8.06h-13.2v5.57h12v7.3h-12Z"/>
+              </g>
+            </svg>
+            Логотип интернет-магазина DEVICE
           </a>
         </div>
 
@@ -76,11 +86,8 @@
       </nav>
     </header>
 
-
     <main class="page-content">
-
       <header class="page-content-header container">
-
         <h1 class="page-title">Моноподы для селфи</h1>
 
         <ul class="breadcrumbs">
@@ -94,18 +101,15 @@
         </ul>
       </header>
 
-      <div class="color-headline"></div>
-
-      <div class="sidebar-overlay"></div>
-
-      <div class="container">
-
         <section class="filters">
 
-          <h2 class="visually-hidden">Каталог товаров</h2>
-          <h3 class="block-title">фильтр:</h3>
+          <header class="filter-header">
+            <div class="filter-wrapper">
+              <h3 class="block-title">фильтр:</h3>
+            </div>
+          </header>
 
-          <form class="filter" action="https://echo.htmlacademy.ru" method="post">
+          <form class="filter filter-wrapper" action="https://echo.htmlacademy.ru" method="post">
 
             <fieldset>
               <legend>Стоимость</legend>
@@ -160,12 +164,12 @@
               <legend>Bluetooth</legend>
               <ul>
                 <li class="filter-option">
-                  <input type="radio" class="visually-hidden filter-input filter-input-radio" name="bluetooth" value="yes" checked>
-                  Есть
+                  <input class="visually-hidden filter-input filter-input-radio" type="radio" id="filter-yes" name="bluetooth" value="yes" checked>
+                  <label for="filter-yes">Есть</label>
                 </li>
                 <li class="filter-option">
-                  <input type="radio" class="visually-hidden filter-input filter-input-radio" name="bluetooth" value="no">
-                  Нет
+                  <input class="visually-hidden filter-input filter-input-radio" type="radio" id="filter-no" name="bluetooth" value="no">
+                  <label for="filter-no">Нет</label>
                 </li>
               </ul>
             </fieldset>
@@ -177,31 +181,34 @@
         <section class="catalog">
 
           <header class="catalog-header">
-            <h2 class="visually-hidden">Каталог товаров</h2>
+            <div class="catalog-wrapper">
+              <h2 class="visually-hidden">Каталог товаров</h2>
 
-            <div class="sort">
-              <h3 class="block-title">сортировка:</h3>
-              <ul class="sort-list">
-                <li class="sort-item">
-                  <a href="#">По цене</a>
-                </li>
-                <li class="sort-item">
-                  <a href="#">По типу</a>
-                </li>
-                <li class="sort-item">
-                  <a href="#">По популярности</a>
-                </li>
-                <li class="sort-item">
-                  <a href="#">По возрастанию</a>
-                </li>
-                 <li class="sort-item">
-                  <a href="#">По убыванию</a>
-                </li>
-              </ul>
+              <div class="sort">
+                <h3 class="block-title">сортировка:</h3>
+                <ul class="sort-list">
+                  <li class="sort-item">
+                    <a href="#">По цене</a>
+                  </li>
+                  <li class="sort-item">
+                    <a href="#">По типу</a>
+                  </li>
+                  <li class="sort-item">
+                    <a href="#">По популярности</a>
+                  </li>
+                  <li class="sort-item">
+                    <a href="#">По возрастанию</a>
+                  </li>
+                   <li class="sort-item">
+                    <a href="#">По убыванию</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+
           </header>
 
-          <ul class="catalog-list">
+          <ul class="catalog-list catalog-wrapper">
             <li class="catalog-item">
               <h3 class="catalog-item-title">
                 Любительская селфи-палка
@@ -271,7 +278,7 @@
             </li>
           </ul>
 
-          <footer class="catalog-footer">
+          <footer class="catalog-footer catalog-wrapper">
 
             <ul class="pagination-list">
               <li class="pagination-item pagination-item-prev">
@@ -293,9 +300,6 @@
           </footer>
 
         </section>
-
-      </div>
-
     </main>
 
     <footer class="page-footer">
@@ -304,8 +308,18 @@
           <div class="footer-row">
 
             <div class="footer-logo">
-              <a class="logo-link" href="#">
-                <img class="logo-pic" src="img/logo-pic.png" alt="Логотип интернет-магазина DEVICE" width="163" height="36">
+              <a class="logo-link visually-hidden" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="163" height="36" viewBox="0 0 163 36">
+                  <g class="logo-pic-footer">
+                    <path d="M13.44.67A15.56,15.56,0,0,1,25.08,5.5a16.53,16.53,0,0,1,4.68,12,16.52,16.52,0,0,1-4.68,12,15.56,15.56,0,0,1-11.64,4.82H0V.67Zm0,26.21a8.56,8.56,0,0,0,6.46-2.57,9.45,9.45,0,0,0,2.47-6.84,9.45,9.45,0,0,0-2.47-6.84,8.56,8.56,0,0,0-6.46-2.57H7.68V26.88Z"/>
+                    <path d="M42.24,26.88H55.68v7.39H34.56V.67H55.44V8.06H42.24v5.57h12v7.3h-12Z"/>
+                    <path d="M68.54,34.27,57.6.67H66l7.44,24.72L80.88.67h8.4L78.34,34.27Z"/>
+                    <path d="M92.64.67h7.68v33.6H92.64Z"/>
+                    <path d="M122.59,34.94a17.06,17.06,0,0,1-17.47-17.47A17.06,17.06,0,0,1,122.59,0a17.2,17.2,0,0,1,8.35,2.09,15.8,15.8,0,0,1,6,5.69l-6.62,3.84a7.57,7.57,0,0,0-3.17-3,9.79,9.79,0,0,0-4.61-1.08,9.49,9.49,0,0,0-7.13,2.74,10,10,0,0,0-2.66,7.25,10,10,0,0,0,2.66,7.25,9.49,9.49,0,0,0,7.13,2.74,9.75,9.75,0,0,0,4.63-1.1,7.46,7.46,0,0,0,3.14-3L137,27.17a15.45,15.45,0,0,1-6,5.69A17.31,17.31,0,0,1,122.59,34.94Z"/>
+                    <path d="M148.75,26.88h13.44v7.39H141.07V.67H162V8.06h-13.2v5.57h12v7.3h-12Z"/>
+                  </g>
+                </svg>
+                Логотип интернет-магазина DEVICE
               </a>
             </div>
 
