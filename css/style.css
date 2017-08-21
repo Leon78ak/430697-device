@@ -44,13 +44,35 @@ body {
 
 
 
+/*----catalog-item----*/
+
+ul.catalog-list{
+  width: 760px;
+  margin: 0;
+
+  list-style: none;
+}
 
 
 
+.catalog-item {
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 360px;
+  margin-right: 40px;
+  margin-bottom: 40px;
 
 
 
+}
 
-
-
+.catalog-item h3{
+  margin: 0;
+}
 
