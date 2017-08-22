@@ -1,29 +1,115 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../font/gilroyextrabold.woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../font/gilroylight.woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
 body {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 30px;
+  margin: 0;
+  padding: 0;
+
   font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
   color: #464646;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-header {
+  background-color: #f7e296;
+}
+
+.search-form input,
+.search-form button {
+  font: inherit;
+  color: #000000;
+}
+
+.search-form input::-webkit-input-placeholder {opacity: 0.3;}
+.search-form input::-moz-placeholder          {opacity: 0.3;}
+.search-form input:-moz-placeholder           {opacity: 0.3;}
+.search-form input:-ms-input-placeholder      {opacity: 0.3;}
+
+.search-form input:hover::-webkit-input-placeholder {opacity: 0.6;}
+.search-form input:hover::-moz-placeholder          {opacity: 0.6;}
+.search-form input:hover:-moz-placeholder           {opacity: 0.6;}
+.search-form input:hover:-ms-input-placeholder      {opacity: 0.6;}
+
+.search-form input:focus::-webkit-input-placeholder {color: transparent; }
+.search-form input:focus::-moz-placeholder          {color: transparent; }
+.search-form input:focus:-moz-placeholder           {color: transparent; }
+.search-form input:focus:-ms-input-placeholder      {color: transparent; }
+
+.search-form button {
+  background-color: transparent;
+}
+
+.search-form button:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.search-form button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #000000;
+}
+
+
+.user-menu-list,
+.nav-list,
+.sub-menu-list   {
+  list-style: none;
+}
+
+.user-menu a,
+.main-navigation a {
+  color: #000000;
+}
+
+.nav-item > a {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.slider-slogan b {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
 }
 
 .page-title {
-  font-size: 47px;
-  font-weight: bold;
   font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
   color: #000000;
 }
 
 .section-title {
-  font-size: 47px;
-  font-weight: bold;
   font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
   color: #000000;
 }
 
 .block-title {
-  font-size: 16px;
-  font-weight: bold;
   font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #000000;
@@ -53,7 +139,9 @@ ul.catalog-list{
   list-style: none;
 }
 
-
+li.catalog-item > * {
+  box-shadow: 0 0 0 1px blue;
+}
 
 .catalog-item {
   position: relative;
@@ -65,14 +153,28 @@ ul.catalog-list{
   flex-direction: column;
   box-sizing: border-box;
   width: 360px;
-  margin-right: 40px;
-  margin-bottom: 40px;
-
-
-
 }
 
-.catalog-item h3{
+.catalog-item > p {
   margin: 0;
 }
 
+.catalog-item-title {
+  margin: 0;
+  width: 260px;
+}
+
+.catalog-item-price {
+  width: 100px;
+}
+
+
+p.catalog-item-image {
+  order: -1;
+}
+
+.catalog-item-flag {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
