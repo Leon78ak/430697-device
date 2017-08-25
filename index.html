@@ -11,7 +11,7 @@
 
     <header class="page-header container">
       <div class="header-top">
-        <a class="logo-link">
+        <a class="logo-link" name="top">
             <svg xmlns="http://www.w3.org/2000/svg" width="163" height="36" viewBox="0 0 164 36">
               <g class="logo-pic-header">
                 <title>Логотип интернет-магазина DEVICE</title>
@@ -108,18 +108,18 @@
             <figure>
               <img src="img/slide-1.png" alt="Монопод для селфи" width="384" height="486">
               <figcaption>
-                <p class="slider-slogan"><b>Делай селфи,  как Бен Стиллер!</b></p>
+                <p class="slider-slogan"><b>Делай селфи, как Бен Стиллер!</b></p>
                 <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
               </figcaption>
             </figure>
             <a href="#" class="btn slider-btn">Подробнее</a>
-            <table class="specification">
-              <tr>
+            <table class="product-specification">
+              <tr 3>
                 <td>8,5 м</td>
                 <td>5 кг</td>
                 <td>Карбон</td>
               </tr>
-               <tr>
+               <tr class="type-specification">
                 <td>Длина палки</td>
                 <td>Вес палки</td>
                 <td>Материал</td>
@@ -131,16 +131,16 @@
             <figure>
               <img src="img/slide-2.png" alt="фитнес-браслет" width="345" height="485">
               <figcaption>
-                <p class="slider-title"><b>Худеем правильно!</b></p>
+                <p class="slider-slogan"><b>Худеем правильно!</b></p>
                 <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету</p>
               </figcaption>
             </figure>
             <a href="#" class="btn slider-btn">Подробнее</a>
             <table class="specification">
-              <tr>
+              <tr class="param-specification">
                 <td>48 часов</td>
               </tr>
-               <tr>
+               <tr class="type-specification">
                 <td>Без подзарядки</td>
               </tr>
             </table>
@@ -150,17 +150,17 @@
             <figure>
               <img src="img/slide-3.png" alt="квадрокоптер" width="526" height="334">
               <figcaption>
-                <p class="slider-title"><b>Порхает как бабочка, жалит как пчела!</b></p>
+                <p class="slider-slogan"><b>Порхает как бабочка, жалит как пчела!</b></p>
                 <p class="slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
               </figcaption>
             </figure>
             <a href="#" class="btn slider-btn">Подробнее</a>
             <table class="specification">
-              <tr>
+              <tr class="param-specification">
                 <td>800 м</td>
                 <td>50 м</td>
               </tr>
-               <tr>
+               <tr class="type-specification">
                 <td>Дальность полета</td>
                 <td>Радиус поражения</td>
               </tr>
@@ -202,23 +202,23 @@
           <input type="radio" id="btn-2" name="toggle">
           <input type="radio" id="btn-3" name="toggle">
           <div class="services-menu-controls">
-            <label for="btn-1">Доставка</label>
-            <label for="btn-2">Гарантия</label>
-            <label for="btn-3">Кредит</label>
+            <label class="btn" for="btn-1">Доставка</label>
+            <label class="btn" for="btn-2">Гарантия</label>
+            <label class="btn" for="btn-3">Кредит</label>
           </div>
           <div class="services-content">
             <div class="services-desc services-delivery">
-              <h2 class="desc-title">Доставка</h2>
+              <h2 class="section-title">Доставка</h2>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
               </p>
             </div>
             <div class="services-desc services-guarantee">
-              <h2 class="desc-title">Гарантия</h2>
+              <h2 class="section-title">Гарантия</h2>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом&mdash;не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
               </p>
             </div>
             <div class="services-desc services-credit">
-              <h2 class="desc-title">Кредит</h2>
+              <h2 class="section-title">Кредит</h2>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
               </p>
             </div>
@@ -231,26 +231,26 @@
         <ul class="brands-list">
           <li class="brands-item">
             <a href="#" class="brands-link">
-              <img class="brands-pic" src="img/brand-1grey.png" alt="dji" width="260" height="100">
-              <img class="brands-pic-grey" src="img/brand-1.png" alt="dji" width="260" height="100">
+              <img class="brands-pic-grey" src="img/brand-1grey.png" alt="dji" width="260" height="100">
+              <img class="brands-pic" src="img/brand-1.png" alt="dji" width="260" height="100">
             </a>
           </li>
           <li class="brands-item">
             <a href="#" class="brands-link">
-              <img class="brands-pic" src="img/brand-2grey.png" alt="spgadjets" width="260" height="100">
-              <img class="brands-pic-grey" src="img/brand-2.png" alt="spgadjets" width="260" height="100">
+              <img class="brands-pic-grey" src="img/brand-2grey.png" alt="spgadjets" width="260" height="100">
+              <img class="brands-pic" src="img/brand-2.png" alt="spgadjets" width="260" height="100">
             </a>
           </li>
           <li class="brands-item">
             <a href="#" class="brands-link">
-              <img class="brands-pic" src="img/brand-3grey.png" alt="gopro" width="260" height="100">
-              <img class="brands-pic-grey" src="img/brand-3.png" alt="gopro" width="260" height="100">
+              <img class="brands-pic-grey" src="img/brand-3grey.png" alt="gopro" width="260" height="100">
+              <img class="brands-pic" src="img/brand-3.png" alt="gopro" width="260" height="100">
             </a>
           </li>
           <li class="brands-item">
              <a href="#" class="brands-link">
-              <img class="brands-pic" src="img/brand-4grey.png" alt="vive" width="260" height="100">
-              <img class="brands-pic-grey" src="img/brand-4.png" alt="vive" width="260" height="100">
+              <img class="brands-pic-grey" src="img/brand-4grey.png" alt="vive" width="260" height="100">
+              <img class="brands-pic" src="img/brand-4.png" alt="vive" width="260" height="100">
             </a>
           </li>
         </ul>
@@ -258,7 +258,7 @@
 
 
       <section class="information">
-        <h2 class="section-title">о нас</h2>
+        <h2 class="section-title">О нас</h2>
         <div class="information-text">
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
           </p>
@@ -274,7 +274,7 @@
       </section>
 
       <section class="contacts">
-        <h2 class="section-title">контакты</h2>
+        <h2 class="section-title">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
         <div class="map">
@@ -289,7 +289,7 @@
       <div class="container">
         <div class="page-footer-top">
           <div class="footer-row">
-            <a class="logo-link" href="index.html">
+            <a class="logo-link" href="#top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="163" height="36" viewBox="0 0 163 36">
                   <g class="logo-pic-footer">
                    <title>Логотип интернет-магазина DEVICE</title>
@@ -347,7 +347,7 @@
             <a class="social-link social-link-tw visually-hidden" href="https://twitter.com/htmlacademy_ru" target="_blank" title="Наш Твитер">Твитер</a>
           </div>
 
-          <div class="page-footer-link visually-hidden">
+          <div class="page-footer-link">
             <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-link">htmlacademy</a>
           </div>
         </div>
@@ -367,7 +367,7 @@
         </p>
         <p class="feedback-item">
           <label for="letter">Текст письма:</label>
-          <textarea id="letter" name="letter" rows="10">В свободной форме</textarea>
+          <textarea id="letter" name="letter" rows="10" required>В свободной форме</textarea>
         </p>
         <button class="btn" type="submit">Отправить</button>
       </form>

@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Gilroy";
-  src: url("../font/gilroyextrabold.woff2");
+  src: url("../font/gilroyextrabold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../font/gilroylight.woff2");
+  src: url("../font/gilroylight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
 }
@@ -30,8 +30,26 @@ a {
 }
 
 .page-header {
+  color: #000000;
   background-color: #f7e296;
 }
+
+.logo-pic-header {
+  fill: #000000;
+}
+
+.logo-pic-header:hover {
+  opacity: 0.6;
+}
+
+.logo-pic-header:active {
+  opacity: 0.3;
+}
+
+.logo-link:focus .logo-pic-header {
+  opacity: 0.6;
+}
+
 
 .search-form input,
 .search-form button {
@@ -80,11 +98,27 @@ a {
   color: #000000;
 }
 
+.user-menu a:hover,
+.user-menu a:focus,
+.main-navigation a:hover,
+.main-navigation a:focus {
+  opacity: 0.6;
+}
+
+.user-menu a:active,
+.main-navigation a:active {
+  opacity: 0.3;
+}
+
 .nav-item > a {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
+
+/*--slider--*/
 
 .slider-slogan b {
   font-family: "Gilroy", "Arial", sans-serif;
@@ -92,11 +126,69 @@ a {
   font-weight: 800;
 }
 
-.page-title {
+.btn {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-size: 47px;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #000000;
+
+  background-color: #f0c52e;
+  border: none;
+}
+
+.btn:hover,
+.btn:focus {
+
+}
+
+.btn:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.param-specification td {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 200;
+  color: #000000;
+}
+
+.type-specification td {
+  font-size: 13px;
+}
+
+/*--popular--*/
+.popular-list {
+  list-style: none;
+}
+
+.popular-link {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
   font-weight: 800;
   color: #000000;
+
+  background-color: #f7e299;
+}
+
+.popular-link:hover,
+.popular-link:focus,
+.popular-link:active {
+  background-color: #f0c52e;
+}
+
+/*--services--*/
+.services {
+  color: #464646;
+  background-color: #e5e5e5;
+}
+
+.services-menu-controls label:active {
+  color: #f7e184;
+  background-color: #000000;
 }
 
 .section-title {
@@ -104,6 +196,166 @@ a {
   font-size: 47px;
   font-weight: 800;
   color: #000000;
+}
+
+/*--brands--*/
+.brands-list {
+  list-style: none;
+}
+
+/*--information--*/
+.information-list {
+  list-style: none;
+
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #000000;
+}
+
+
+/*--footer--*/
+.page-footer {
+  color: #ffffff;
+  background-color: #464646;
+}
+
+.logo-pic-footer {
+  fill: #ffc600;
+}
+
+.logo-pic-footer:hover {
+  fill: #c39b22;
+}
+
+.logo-link:focus .logo-pic-footer {
+  fill: #c39b22;
+}
+
+.logo-pic-footer:active {
+  fill: #8d7536;
+}
+
+.page-footer .user-menu-link {
+  color: #ffffff;
+}
+
+.page-footer-menu-list {
+  list-style: none;
+}
+
+.page-footer a {
+  color: #ffffff;
+}
+
+.page-footer a:hover,
+.page-footer a:focus {
+  opacity: 0.6;
+}
+
+.page-footer a:active {
+  opacity: 0.3;
+}
+
+.page-footer-menu-item a {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.social-link {
+  opacity: 0.3;
+}
+
+.social-link:hover,
+.social-link:focus  {
+  opacity: 0.6;
+}
+
+.social-link:active {
+  opacity: 0.1;
+}
+
+/*--modal--*/
+.feedback-item input:invalid,
+.feedback-item textarea:invalid {
+  background-color: #f6dada;
+}
+
+.feedback-item input,
+.feedback-item textarea {
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.feedback-item input:hover,
+.feedback-item textarea:hover {
+  background-color: #eaeaea;
+}
+
+.feedback-item input:focus,
+.feedback-item textarea:focus {
+  font-size: 14px;
+  border: 3px solid #f0c52e;
+  outline: none;
+}
+
+.feedback-item label {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 18px;
+  color: #000000;
+}
+
+/*--inner-page--*/
+.page-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend,
+.catalog-item-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.filter-option {
+  list-style: none;
+  line-height: 40px;
+}
+
+.filter-input:hover,
+.filter-input:focus {
+  opacity: 0.6;
 }
 
 .block-title {
@@ -115,22 +367,96 @@ a {
   color: #000000;
 }
 
-.logo-pic-header {
-  fill: #000000;
+.sort-list {
+  list-style: none;
 }
 
-.logo-pic-footer {
-  fill: #ffc600;
+.sort-item a {
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+
+  opacity: 0.3;
 }
 
-.brands-pic-grey {
-  display: none;
+.sort-item a:hover,
+.sort-item a:focus {
+  opacity: 0.6;
 }
 
+.sort-item a:active {
+  opacity: 1;
+}
 
+.catalog-list {
+  list-style: none;
+}
 
+.catalog-item-price {
+  font-size: 16px;
+}
 
-/*----catalog-item----*/
+.bookmark {
+  font-size: 13px;
+  line-height: 36px;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.bookmark:hover,
+.bookmark:focus, {
+  opacity: 1;
+}
+
+.bookmark:active {
+  opacity: 0.2;
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #000000;
+
+  background-color: #ffffff;
+  opacity: 0.3;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus  {
+  opacity: 0.6;
+}
+
+.pagination-item a:focus {
+  opacity: 1;
+}
+
+.pagination-item-current a,
+.pagination-item-prev a,
+.pagination-item-next a     {
+  opacity: 1;
+}
+
+.pagination-item-prev a:hover,
+.pagination-item-next a:hover,
+.pagination-item-prev a:focus,
+.pagination-item-next a:focus  {
+  background-color: #d9d9d9;
+}
+
+.pagination-item-prev a:active,
+.pagination-item-next a:active  {
+  opacity: 0.3;
+}
+
+/*----catalog-item----
 
 ul.catalog-list{
   width: 760px;
@@ -178,3 +504,4 @@ p.catalog-item-image {
   top: 0;
   right: 0;
 }
+--*/

@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body inner-page>
 
     <header class="page-header container">
       <div class="header-top">
-        <a class="logo-link" href="index.html">
+        <a class="logo-link" href="index.html" tabindex="0">
             <svg xmlns="http://www.w3.org/2000/svg" width="163" height="36" viewBox="0 0 164 36">
               <g class="logo-pic-header">
                 <title>Логотип интернет-магазина DEVICE</title>
@@ -28,7 +28,7 @@
         <div class="header-search">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
             <input type="search" name="search">
-            <input type="submit" value="">
+            <button type="submit" name="search" value="">Найти</button>
           </form>
         </div>
 
@@ -101,7 +101,6 @@
       </header>
 
         <section class="filters">
-
           <header class="filter-header">
             <div class="filter-wrapper">
               <h3 class="block-title">фильтр:</h3>
@@ -218,14 +217,14 @@
               <p class="catalog-item-price">
                 500 руб.
               </p>
-              <span class="catalog-item-flag"></span>
+              <p class="catalog-item-flag"></p>
               <div class="actions">
-                <a href="#" class="to-cart">В корзину</a>
+                <a href="#" class="btn to-cart">В корзину</a>
                 <a href="#" class="bookmark">Добавить к сравнению</a>
               </div>
             </li>
 
-             <li class="catalog-item">
+            <li class="catalog-item">
               <h3 class="catalog-item-title">
                 Профессиональная селфи-палка
               </h3>
@@ -235,11 +234,11 @@
               <p class="catalog-item-price">
                 1500 руб.
               </p>
-              <span class="catalog-item-flag"></span>
+              <p class="catalog-item-flag"></p>
               <div class="actions">
-                <a href="#" class="to-cart">В корзину</a>
+                <a href="#" class="btn to-cart">В корзину</a>
                 <a href="#" class="bookmark">Добавить к сравнению</a>
-              </div
+              </div>
             </li>
 
              <li class="catalog-item">
@@ -252,9 +251,9 @@
                <p class="catalog-item-price">
                 2500 руб.
               </p>
-              <span class="catalog-item-flag"></span>
+              <p class="catalog-item-flag"></p>
               <div class="actions">
-                <a href="#" class="to-cart">В корзину</a>
+                <a href="#" class="btn to-cart">В корзину</a>
                 <a href="#" class="bookmark">Добавить к сравнению</a>
               </div>
             </li>
@@ -269,9 +268,11 @@
               <p class="catalog-item-price">
                 4900 руб.
               </p>
-              <span class="catalog-item-flag catalog-item-flag-new">новинка</span>
+              <p class="catalog-item-flag">
+                <img src="img/flag-new.png" width="60" height="61" alt="новинка">
+              </p>
               <div class="actions">
-                <a href="#" class="to-cart">В корзину</a>
+                <a href="#" class="btn to-cart">В корзину</a>
                 <a href="#" class="bookmark">Добавить к сравнению</a>
               </div>
             </li>
