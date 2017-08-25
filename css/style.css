@@ -336,6 +336,10 @@ a {
   opacity: 0.1;
 }
 
+.filters {
+  background-color: #efefef;
+}
+
 .filter fieldset {
   border: none;
 }
@@ -356,6 +360,11 @@ a {
 .filter-input:hover,
 .filter-input:focus {
   opacity: 0.6;
+}
+
+.catalog-header,
+.catalog-footer  {
+  background-color: #ebebeb;
 }
 
 .block-title {
@@ -425,7 +434,6 @@ a {
   letter-spacing: 0.2em;
   color: #000000;
 
-  background-color: #ffffff;
   opacity: 0.3;
 }
 
