@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body inner-page>
-
     <header class="page-header container">
       <div class="header-top">
-        <a class="logo-link" href="index.html" tabindex="0">
+        <a class="logo-link" href="index.html">
             <svg xmlns="http://www.w3.org/2000/svg" width="163" height="36" viewBox="0 0 164 36">
               <g class="logo-pic-header">
                 <title>Логотип интернет-магазина DEVICE</title>
@@ -27,14 +26,14 @@
 
         <div class="header-search">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="search" name="search">
+            <input type="search" id="search" name="search" placeholder="Поиск по сайту">
             <button type="submit" name="search" value="">Найти</button>
           </form>
         </div>
 
         <div class="user-menu">
           <ul class="user-menu-list">
-            <li class="user-menu-item">
+            <li class="user-menu-item user-menu-item-enter">
               <a class="user-menu-link" href="#">Войти</a>
             </li>
             <li class="user-menu-item">
@@ -48,8 +47,8 @@
       </div>
 
       <nav class="main-navigation">
-        <ul class="nav-list">
-          <li class="nav-item">
+        <ul class="nav-catalog-menu">
+          <li class="nav-catalog-item">
             <a href="#">Каталог товаров</a>
             <ul class="sub-menu-list">
               <li class="sub-menu-item">
@@ -72,13 +71,15 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
+        </ul>
+        <ul class="services-menu services-menu-header">
+          <li class="services-menu-item services-menu-item-delivery">
             <a href="#">Доставка</a>
           </li>
-          <li class="nav-item">
+          <li class="services-menu-item">
             <a href="#">Гарантия</a>
           </li>
-          <li class="nav-item">
+          <li class="services-menu-item services-menu-item-contacts">
             <a href="#">Контакты</a>
           </li>
         </ul>
@@ -99,7 +100,7 @@
           <li class="breadcrumbs-current">Моноподы для селфи</li>
         </ul>
       </header>
-
+      <div class="page-content-wrapper">
         <section class="filters">
           <header class="filter-header">
             <div class="filter-wrapper">
@@ -177,7 +178,6 @@
         </section>
 
         <section class="catalog">
-
           <header class="catalog-header">
             <div class="catalog-wrapper">
               <h2 class="visually-hidden">Каталог товаров</h2>
@@ -203,7 +203,6 @@
                 </ul>
               </div>
             </div>
-
           </header>
 
           <ul class="catalog-list catalog-wrapper">
@@ -279,7 +278,6 @@
           </ul>
 
           <footer class="catalog-footer catalog-wrapper">
-
             <ul class="pagination-list">
               <li class="pagination-item pagination-item-prev">
                 <a href="#">назад</a>
@@ -298,15 +296,15 @@
               </li>
             </ul>
           </footer>
-
         </section>
+      </div>
     </main>
 
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer-top">
           <div class="footer-row">
-            <a class="logo-link" href="index.html">
+            <a class="logo-link" href="#top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="163" height="36" viewBox="0 0 163 36">
                   <g class="logo-pic-footer">
                    <title>Логотип интернет-магазина DEVICE</title>
@@ -339,14 +337,14 @@
             <span class="address">г. Москва, ул. Строителей, 15</span>
 
             <div class="page-footer-menu">
-              <ul class="services-list">
-                <li class="services-list-item">
+              <ul class="services-menu">
+                <li class="services-menu-item">
                   <a href="#">Доставка</a>
                 </li>
-                <li class="services-list-item">
+                <li class="services-menu-item">
                   <a href="#">Гарантия</a>
                 </li>
-                <li class="services-list-item">
+                <li class="services-menu-item">
                   <a href="#">Контакты</a>
                 </li>
               </ul>
@@ -357,16 +355,14 @@
         </div>
 
         <div class="page-footer-links">
-
           <div class="page-footer-social">
-            <a class="social-link social-link-fb" href="https://www.facebook.com/htmlacademy" target="_blank" title="Наш Фейсбук">Фейсбук</a>
-            <a class="social-link social-link-in" href="https://www.instagram.com/htmlacademy/" target="_blank" title="Наш Инстаграм">Инстаграм</a>
-            <a class="social-link social-link-tw" href="https://twitter.com/htmlacademy_ru" target="_blank" title="Наш Твитер">Твитер</a>
+            <a class="social-link social-link-fb visually-hidden" href="https://www.facebook.com/htmlacademy" target="_blank" title="Наш Фейсбук">Фейсбук</a>
+            <a class="social-link social-link-in visually-hidden" href="https://www.instagram.com/htmlacademy/" target="_blank" title="Наш Инстаграм">Инстаграм</a>
+            <a class="social-link social-link-tw visually-hidden" href="https://twitter.com/htmlacademy_ru" target="_blank" title="Наш Твитер">Твитер</a>
           </div>
 
           <div class="page-footer-link">
-            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy
-            </a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="logo-link">htmlacademy</a>
           </div>
         </div>
       </div>
