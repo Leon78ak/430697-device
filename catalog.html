@@ -112,7 +112,7 @@
           <form class="filter filter-wrapper" action="https://echo.htmlacademy.ru" method="get">
 
             <fieldset>
-              <legend>Стоимость</legend>
+              <legend class="filter-name">Стоимость</legend>
               <div class="range-filter">
                 <div class="range-controls">
                   <div class="range-scale">
@@ -135,7 +135,7 @@
             </fieldset>
 
             <fieldset>
-              <legend>Цвет</legend>
+              <legend class="filter-name">Цвет</legend>
               <ul>
                 <li class="filter-option">
                   <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" id="opt-1" name="black" checked>
@@ -161,7 +161,7 @@
             </fieldset>
 
             <fieldset>
-              <legend>Bluetooth</legend>
+              <legend class="filter-name">Bluetooth</legend>
               <ul>
                 <li class="filter-option">
                   <input class="visually-hidden filter-input filter-input-radio" type="radio" id="filter-yes" name="bluetooth" value="yes" checked>
@@ -186,7 +186,7 @@
               <div class="sort">
                 <h3 class="block-title">сортировка:</h3>
                 <ul class="sort-list">
-                  <li class="sort-item">
+                  <li class="sort-item active">
                     <a href="#">По цене</a>
                   </li>
                   <li class="sort-item">
@@ -195,108 +195,114 @@
                   <li class="sort-item">
                     <a href="#">По популярности</a>
                   </li>
-                  <li class="sort-item">
-                    <a href="#">По возрастанию</a>
+                  <li class="sort-item sort-arrow sort-arrow-up active">
+                    <a href="#">
+                    <span class="visually-hidden">По возрастанию</span></a>
                   </li>
-                   <li class="sort-item">
-                    <a href="#">По убыванию</a>
+                   <li class="sort-item sort-arrow sort-arrow-down">
+                    <a href="#">
+                    <span class="visually-hidden">По убыванию</span></a>
                   </li>
                 </ul>
               </div>
             </div>
           </header>
 
-          <ul class="catalog-list catalog-wrapper">
-            <li class="catalog-item">
-              <h3 class="catalog-item-title">
-                <a href="catalog-item.html">Любительская селфи-палка</a>
-              </h3>
-              <p class="catalog-item-image">
-                <img src="img/monopod-500.jpg" width="360" height="380" alt="Любительская селфи-палка">
-              </p>
-              <p class="catalog-item-price">
-                500 руб.
-              </p>
-              <p class="catalog-item-flag"></p>
-              <div class="actions">
-                <a href="#" class="btn to-cart">В корзину</a>
-                <a href="#" class="bookmark">Добавить к сравнению</a>
-              </div>
-            </li>
-
-            <li class="catalog-item">
-              <h3 class="catalog-item-title">
-               <a href="catalog-item.html">Профессиональная селфи-палка</a>
-              </h3>
-              <p class="catalog-item-image">
-                <img src="img/monopod-1500.jpg" width="360" height="380" alt="Любительская селфи-палка">
-              </p>
-              <p class="catalog-item-price">
-                1500 руб.
-              </p>
-              <p class="catalog-item-flag"></p>
-              <div class="actions">
-                <a href="#" class="btn to-cart">В корзину</a>
-                <a href="#" class="bookmark">Добавить к сравнению</a>
-              </div>
-            </li>
-
-             <li class="catalog-item">
-              <h3 class="catalog-item-title">
-                <a href="catalog-item.html">Непотопляемая селфи-палка</a>
-              </h3>
-              <p class="catalog-item-image">
-                <img src="img/monopod-2500.jpg" width="360" height="380" alt="Любительская селфи-палка">
-              </p>
-               <p class="catalog-item-price">
-                2500 руб.
-              </p>
-              <p class="catalog-item-flag"></p>
-              <div class="actions">
-                <a href="#" class="btn to-cart">В корзину</a>
-                <a href="#" class="bookmark">Добавить к сравнению</a>
-              </div>
-            </li>
-
-             <li class="catalog-item">
-              <h3 class="catalog-item-title">
-               <a href="catalog-item.html">Селфи-палка &laquo;Следуй за мной&raquo;</a>
-              </h3>
-              <p class="catalog-item-image">
-                <img src="img/monopod-4900.jpg" width="360" height="380" alt="Любительская селфи-палка">
-              </p>
-              <p class="catalog-item-price">
-                4900 руб.
-              </p>
-              <p class="catalog-item-flag">
-                <img src="img/flag-new.png" width="60" height="61" alt="новинка">
-              </p>
-              <div class="actions">
-                <a href="#" class="btn to-cart">В корзину</a>
-                <a href="#" class="bookmark">Добавить к сравнению</a>
-              </div>
-            </li>
-          </ul>
-
-          <footer class="catalog-footer catalog-wrapper">
-            <ul class="pagination-list">
-              <li class="pagination-item pagination-item-prev">
-                <a href="#">назад</a>
+          <div class="catalog-wrapper">
+            <ul class="catalog-list">
+              <li class="catalog-item">
+                <h3 class="catalog-item-title">
+                  <a href="catalog-item.html">Любительская селфи-палка</a>
+                </h3>
+                <p class="catalog-item-image">
+                  <img src="img/monopod-500.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                </p>
+                <p class="catalog-item-price">
+                  500 руб.
+                </p>
+                <p class="catalog-item-flag"></p>
+                <div class="actions">
+                  <a href="#" class="btn to-cart">В корзину</a>
+                  <a href="#" class="bookmark">Добавить к сравнению</a>
+                </div>
               </li>
-              <li class="pagination-item pagination-item-current">
-                <a>1</a>
+
+              <li class="catalog-item">
+                <h3 class="catalog-item-title">
+                 <a href="catalog-item.html">Профессиональная селфи&#8209;палка</a>
+                </h3>
+                <p class="catalog-item-image">
+                  <img src="img/monopod-1500.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                </p>
+                <p class="catalog-item-price">
+                  1500 руб.
+                </p>
+                <p class="catalog-item-flag"></p>
+                <div class="actions">
+                  <a href="#" class="btn to-cart">В корзину</a>
+                  <a href="#" class="bookmark">Добавить к сравнению</a>
+                </div>
               </li>
-              <li class="pagination-item">
-                <a href="#">2</a>
+
+               <li class="catalog-item">
+                <h3 class="catalog-item-title">
+                  <a href="catalog-item.html">Непотопляемая селфи-палка</a>
+                </h3>
+                <p class="catalog-item-image">
+                  <img src="img/monopod-2500.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                </p>
+                 <p class="catalog-item-price">
+                  2500 руб.
+                </p>
+                <p class="catalog-item-flag"></p>
+                <div class="actions">
+                  <a href="#" class="btn to-cart">В корзину</a>
+                  <a href="#" class="bookmark">Добавить к сравнению</a>
+                </div>
               </li>
-              <li class="pagination-item">
-                <a href="#">3</a>
-              </li>
-              <li class="pagination-item pagination-item-next">
-                <a href="#">вперед</a>
+
+               <li class="catalog-item">
+                <h3 class="catalog-item-title">
+                 <a href="catalog-item.html">Селфи-палка &laquo;Следуй за мной&raquo;</a>
+                </h3>
+                <p class="catalog-item-image">
+                  <img src="img/monopod-4900.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                </p>
+                <p class="catalog-item-price">
+                  4900 руб.
+                </p>
+                <p class="catalog-item-flag">
+                  <img src="img/flag-new.png" width="60" height="61" alt="новинка">
+                </p>
+                <div class="actions">
+                  <a href="#" class="btn to-cart">В корзину</a>
+                  <a href="#" class="bookmark">Добавить к сравнению</a>
+                </div>
               </li>
             </ul>
-          </footer>
+          </div>
+
+          <div class="catalog-wrapper">
+            <footer class="catalog-footer">
+              <ul class="pagination-list">
+                <li class="pagination-item pagination-item-prev">
+                  <a href="#">назад</a>
+                </li>
+                <li class="pagination-item pagination-item-current">
+                  <a>1</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="#">2</a>
+                </li>
+                <li class="pagination-item">
+                  <a href="#">3</a>
+                </li>
+                <li class="pagination-item pagination-item-next">
+                  <a href="#">вперед</a>
+                </li>
+              </ul>
+            </footer>
+          </div>
         </section>
       </div>
     </main>
