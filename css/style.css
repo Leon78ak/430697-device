@@ -552,7 +552,7 @@ ul.sub-menu-list {
 }
 
 .page-content-header {
-  width: 1200px;
+  margin-bottom: 49px;
   padding: 0 80px;
 }
 
@@ -570,7 +570,6 @@ ul.sub-menu-list {
 .breadcrumbs {
   display: flex;
   margin: 0;
-  margin-bottom: 49px;
   padding: 0;
 
   list-style: none;
@@ -605,6 +604,22 @@ ul.sub-menu-list {
   background-color: #efefef;
 }
 
+.block-title {
+  margin: 0;
+  padding: 26px 0;
+
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #000000;
+}
+
+.filters .block-title {
+  background-color: #dbdbdb;
+}
+
 .catalog {
   width: calc(50% + 250px);
 }
@@ -636,16 +651,9 @@ ul.sub-menu-list {
   background-color: #ebebeb;
 }
 
-.block-title {
-  margin: 0;
-  padding: 0;
-
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #000000;
+.sort {
+  display: flex;
+  align-items: center;
 }
 
 .sort-list {
@@ -678,6 +686,11 @@ ul.sub-menu-list {
 
 .sort-item a:active {
   opacity: 1;
+}
+
+.catalog-wrapper {
+  width: 760px;
+  margin-left: 70px;
 }
 
 .catalog-list {
