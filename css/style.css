@@ -305,6 +305,7 @@ ul.sub-menu-list {
 
 .btn {
   position: relative;
+
   display: inline-block;
   padding: 10px 40px;
 
@@ -320,16 +321,19 @@ ul.sub-menu-list {
 
 .btn::before {
   content: "";
+
   position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+
   display: block;
   width: 100%;
   height: 20%;
-  background-color: #f0c52e;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  z-index: -1;
 
+  background-color: #f0c52e;
+
+  transform: translateY(-50%);
   transition-duration: 0.5s;
   transition-property: height;
 }
@@ -505,17 +509,36 @@ ul.sub-menu-list {
   padding-left: 35px;
 }
 
-.user-menu-link::before {
+.page-footer .user-menu-link::before {
   content: "";
 
   position: absolute;
-  top: 0;
-  left: 8px;
+  left: 11px;
+  bottom: 4px;
 
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.page-footer .enter-link::before {
   width: 13px;
-  height: 13px;
+  height: 12px;
 
-  background-image: url("");
+  background-image: url("../img/svg-icons/user-yellow.svg");
+}
+
+.page-footer .compare-link::before {
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../img/svg-icons/compare-yellow.svg");
+}
+
+.page-footer .cart-link::before {
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/svg-icons/cart-yellow.svg");
 }
 
 .page-footer-menu .services-menu {
@@ -528,17 +551,55 @@ ul.sub-menu-list {
 }
 
 .page-footer-links {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   padding-left: 500px;
 }
 
+.page-footer-links::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #ffc600;
+  transform: translateY(-50%);
+}
+
 .page-footer-social {
-/*  width: 160px;-ширина блока с иконками*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  width: 160px;
 }
 
 .social-link {
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
   opacity: 0.3;
+}
+
+.social-link-fb {
+  background-image: url("../img/svg-icons/fb.svg");
+}
+
+.social-link-in {
+  background-image: url("../img/svg-icons/instagram.svg");
+}
+
+.social-link-tw {
+  background-image: url("../img/svg-icons/twitter.svg");
 }
 
 .social-link:hover,
@@ -548,6 +609,25 @@ ul.sub-menu-list {
 
 .social-link:active {
   opacity: 0.1;
+}
+
+.academy-link {
+  display: block;
+  width: 26px;
+  height: 34px;
+
+  background-image: url("../img/svg-icons/logo-html.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.academy-link:hover,
+.academy-link:focus  {
+  opacity: 0.6;
+}
+
+.academy-link:active {
+  opacity: 0.3;
 }
 
 /*--modal--*/
