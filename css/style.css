@@ -109,7 +109,7 @@ img {
 }
 
 .search-form {
-  position: relative;
+  font-size: 0;
 }
 
 .search-form input::-webkit-input-placeholder {opacity: 0.3;}
@@ -132,6 +132,7 @@ img {
   padding: 6px 0;
 
   font: inherit;
+  font-size: 15px;
   line-height: 36px;
   color: #000000;
 
@@ -140,30 +141,35 @@ img {
 }
 
 .search-form input[type="search"] {
-  width: 440px;
-  padding-right: 85px;
+  box-sizing: border-box;
+  width: 355px;
   padding-left: 40px;
+  padding-right: 10px;
   background-color: transparent;
 }
 
-.search-form button {
-  position: absolute;
-  top: 0;
-  right: 0;
+.icon-search {
+  background-image: url("../img/svg-icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 4px center;
+}
+
+.search-form input[type="submit"] {
   display: none;
   width: 85px;
 
   background-color: transparent;
   box-shadow: inset 0 0 0 2px #000000;
+  cursor: pointer;
 }
 
-.search-form button:hover,
-.search-form button:focus {
+.search-form input[type="submit"]:hover,
+.search-form input[type="submit"]:focus {
   color: #ffffff;
   background-color: #000000;
 }
 
-.search-form button:active {
+.search-form input[type="submit"]:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #000000;
 }
@@ -172,7 +178,8 @@ img {
   box-shadow: inset 0 -2px 0 0 #000000;
 }
 
-.search-form input[type="search"]:focus + button {
+.search-form input[type=submit]:active,
+.search-form input[type="search"]:focus ~ input[type="submit"] {
   display: inline-block;
   vertical-align: top;
 }
@@ -207,7 +214,7 @@ img {
 }
 
 .user-menu a,
-.main-navigation a {
+.sub-menu-list a {
   line-height: 36px;
   color: #000000;
 }
@@ -215,7 +222,7 @@ img {
 .user-menu a:hover,
 .user-menu a:focus,
 .main-navigation a:hover,
-.main-navigation a:focus {
+.main-navigation a:focus  {
   opacity: 0.6;
 }
 
@@ -224,52 +231,128 @@ img {
   opacity: 0.3;
 }
 
-.nav-catalog-item > a,
-.services-menu         {
+.user-menu-link {
+  position: relative;
+  padding-left: 35px;
+}
+
+.user-menu-link::before {
+  content: "";
+
+  position: absolute;
+  left: 11px;
+  bottom: 4px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.enter-link::before {
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/svg-icons/user.svg");
+}
+
+.compare-link::before {
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../img/svg-icons/compare.svg");
+}
+
+.cart-link::before {
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../img/svg-icons/cart.svg");
+}
+
+/*----main-nav----*/
+
+.services-menu a,
+.nav-catalog-item-link {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 1.2;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  color: #000000;
 }
 
 .main-navigation {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 
   padding: 0 60px;
   padding-bottom: 50px;
 }
 
-.nav-catalog-menu {
-  width: 500px;
-}
-
 .nav-catalog-item {
   position: relative;
+}
+
+.nav-catalog-item-link {
+  position: relative;
+
+  max-width: 220px;
+  padding-right: 36px;
   line-height: 1.2;
 }
 
-ul.sub-menu-list {
+.nav-catalog-item-link::after {
+  content: "";
+
   position: absolute;
-  top: 0;
-  left: -80px;
+  top: 50%;
+  right: 4px;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/svg-icons/plus.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transform: translateY(-50%);
+}
+
+.sub-menu-wrapper {
+  position: absolute;
+
+  left: -60px;
+  z-index: 10;
+
   display: none;
-  width: 1200px;
-  margin-top: 54px;
-  padding-left: 80px;
+  width: 1100px;
+  padding-top: 30px;
+  padding-bottom: 38px;
+  padding-left: 60px;
 
   background-color: #f7e296;
 }
 
-.sub-menu-item  {
-
+ul.sub-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 640px;
 }
 
-.sub-menu-item a {
-  line-height: 36px;
+.nav-catalog-item:hover .sub-menu-wrapper {
+  display: block;
+}
 
+.sub-menu-item {
+  width: 200px;
+}
+
+.sub-menu-item:nth-child(3n + 1) {
+  width: 240px;
+}
+
+.sub-menu-item:last-child {
+  width: 100%;
 }
 
 .services-menu {
@@ -502,22 +585,6 @@ ul.sub-menu-list {
 .page-footer .user-menu-item {
   margin: 0;
   width: auto;
-}
-
-.page-footer .user-menu-link {
-  position: relative;
-  padding-left: 35px;
-}
-
-.page-footer .user-menu-link::before {
-  content: "";
-
-  position: absolute;
-  left: 11px;
-  bottom: 4px;
-
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
 .page-footer .enter-link::before {
