@@ -410,7 +410,7 @@ ul.sub-menu-list {
   position: absolute;
   top: 311px;
   right: 80px;
-  z-index: 1000;
+  z-index: 5;
 
   display: flex;
   justify-content: flex-end;
@@ -1198,6 +1198,134 @@ label.btn {
 }
 
 /*--modal--*/
+.modal {
+  position: fixed;
+  z-index: 100;
+  box-sizing: border-box;
+
+  width: 960px;
+/*
+  max-height: 100vh;
+
+  overflow: scroll;
+*/
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.modal p {
+  margin: 0;
+}
+
+.modal-feedback {
+  padding-top: 95px;
+  padding-right: 100px;
+  padding-bottom: 80px;
+  padding-left: 100px;
+
+  background-color: #ffffff;
+}
+
+.modal-map {
+  display: none;
+}
+
+.modal-map img {
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  z-index: 1000;
+
+
+  width: 55px;
+  height: 55px;
+
+  font-size: 0;
+
+  background-color: #f7e296;
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+  outline: 0;
+}
+
+.modal-close::before,
+.modal-close::after   {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 13px;
+
+  width: 29px;
+  height: 2px;
+
+  background-color: #ffffff;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close:hover,
+.modal-close:focus  {
+  background-color: #f0c52e;
+}
+
+.modal-close:active  {
+  background-color: #faedc0;
+}
+
+
+.form-layout-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.feedback-item {
+  width: 360px;
+  margin: 0;
+  margin-bottom: 35px;
+
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.feedback-item label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.feedback-item input,
+.feedback-item textarea {
+  box-sizing: border-box;
+  width: 360px;
+  padding: 18px 20px;
+}
+
+.feedback-item textarea {
+  width: 760px;
+}
+
 .feedback-item input:invalid,
 .feedback-item textarea:invalid {
   background-color: #f6dada;
@@ -1216,9 +1344,7 @@ label.btn {
 
 .feedback-item input:focus,
 .feedback-item textarea:focus {
-  font-size: 14px;
-  border: 3px solid #f0c52e;
-  outline: none;
+  outline: 3px solid #f7e296;
 }
 
 .feedback-item label {
@@ -1227,6 +1353,10 @@ label.btn {
   font-weight: 800;
   line-height: 18px;
   color: #000000;
+}
+
+.btn-modal-wrapper {
+  position: relative;
 }
 
 /*--inner-page--*/

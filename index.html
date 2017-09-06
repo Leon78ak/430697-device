@@ -374,21 +374,23 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="feedback-item">
-          <label for="user-name">Ваше имя:</label>
-          <input type="text" id="user-name" name="user-name" placeholder="Представьтесь, пожалуйста" required>
-        </p>
-        <p class="feedback-item">
-          <label for="email">Ваш e-mail:</label>
-          <input type="email" id="email" name="email" placeholder="Для отправки ответа" required>
-        </p>
-        <p class="feedback-item">
-          <label for="letter">Текст письма:</label>
-          <textarea id="letter" name="letter" rows="10" required>В свободной форме</textarea>
-        </p>
+        <div class="form-layout-container">
+          <p class="feedback-item">
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" id="user-name" name="user-name" placeholder="Представьтесь, пожалуйста" required>
+          </p>
+          <p class="feedback-item">
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Для отправки ответа" required>
+          </p>
+          <p class="feedback-item">
+            <label for="letter">Текст письма:</label>
+            <textarea id="letter" name="letter" rows="10" required>В свободной форме</textarea>
+          </p>
+        </div>
         <button class="btn" type="submit">Отправить</button>
       </form>
-      <button class="modal-close visually-hidden" type="button" title="Закрыть">Закрыть</button>
+      <button class="modal-close" type="button" title="Закрыть">Закрыть</button>
     </section>
 
     <section class="modal modal-map">
@@ -396,7 +398,7 @@
       <p>
         <img src="img/map-bg.jpg" alt="Офис компании по адресу г. Москва, ул. Строителей, 15" widt еh="960" height="559">
       </p>
-      <button class="modal-close visually-hidden" type="button" title="Закрыть">Закрыть</button>
+      <button class="modal-close" type="button" title="Закрыть">Закрыть</button>
     </section>
   </body>
 </html>
