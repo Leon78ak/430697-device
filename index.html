@@ -95,80 +95,86 @@
       <h1 class="visually-hidden">интернет-магазин гаджетов DEVICE</h1>
       <section class="promo-slider container">
         <h2 class="visually-hidden">промо-слайдер</h2>
-        <input type="radio" id="slide-1" name="toggle" checked>
+        <input type="radio" id="sld-1" name="toggle">
         <input type="radio" id="slide-2" name="toggle">
         <input type="radio" id="slide-3" name="toggle">
-
-        <div class="slider-controls">
-          <label for="slide-1"></label>
-          <label for="slide-2"></label>
-          <label for="slide-3"></label>
-        </div>
-
-        <div class="slider-slides">
-          <div class="slider">
-            <figure>
-              <img src="img/slide-1.png" alt="Монопод для селфи" width="384" height="486">
-              <figcaption>
-                <p class="slider-slogan"><b>Делай селфи, как Бен Стиллер!</b></p>
-                <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              </figcaption>
-            </figure>
-            <a href="#" class="btn slider-btn">Подробнее</a>
-            <table class="product-specification">
-              <tr 3>
-                <td>8,5 м</td>
-                <td>5 кг</td>
-                <td>Карбон</td>
-              </tr>
-               <tr class="type-specification">
-                <td>Длина палки</td>
-                <td>Вес палки</td>
-                <td>Материал</td>
-              </tr>
-            </table>
+        <div class="slider-wrapper">
+          <div class="slider-controls">
+            <label for="sld-1"></label>
+            <label for="slide-2"></label>
+            <label for="slide-3"></label>
           </div>
 
-           <div class="slider">
-            <figure>
-              <img src="img/slide-2.png" alt="фитнес-браслет" width="345" height="485">
-              <figcaption>
-                <p class="slider-slogan"><b>Худеем правильно!</b></p>
-                <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету</p>
-              </figcaption>
-            </figure>
-            <a href="#" class="btn slider-btn">Подробнее</a>
-            <table class="specification">
-              <tr class="param-specification">
-                <td>48 часов</td>
-              </tr>
-               <tr class="type-specification">
-                <td>Без подзарядки</td>
-              </tr>
-            </table>
-          </div>
+          <div class="slider-slides">
+            <div class="slide slide-1">
+              <figure>
+                <p class="slider-pic">
+                  <img src="img/slide-1.png" alt="Монопод для селфи" width="384" height="486">
+                </p>
+                <figcaption class="slider-text">
+                  <p class="slider-slogan"><b>Делай селфи,<br/>
+                    как Бен Стиллер!</b>
+                  </p>
+                  <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+                  </p>
+                  <a href="#" class="btn slider-btn">Подробнее</a>
+                  <table class="product-specification">
+                    <tr class="param-specification">
+                      <td>8,5 м</td>
+                      <td>5 кг</td>
+                      <td>Карбон</td>
+                    </tr>
+                     <tr class="type-specification">
+                      <td>Длина палки</td>
+                      <td>Вес палки</td>
+                      <td>Материал</td>
+                    </tr>
+                  </table>
+                </figcaption>
+              </figure>
+            </div>
 
-           <div class="slider">
-            <figure>
-              <img src="img/slide-3.png" alt="квадрокоптер" width="526" height="334">
-              <figcaption>
-                <p class="slider-slogan"><b>Порхает как бабочка, жалит как пчела!</b></p>
-                <p class="slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-              </figcaption>
-            </figure>
-            <a href="#" class="btn slider-btn">Подробнее</a>
-            <table class="specification">
-              <tr class="param-specification">
-                <td>800 м</td>
-                <td>50 м</td>
-              </tr>
-               <tr class="type-specification">
-                <td>Дальность полета</td>
-                <td>Радиус поражения</td>
-              </tr>
-            </table>
-          </div>
+            <div class="slide slide-2">
+              <figure>
+                <img src="img/slide-2.png" alt="фитнес-браслет" width="345" height="485">
+                <figcaption class="slider-text">
+                  <p class="slider-slogan"><b>Худеем правильно!</b>
+                  </p>
+                  <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету</p>
+                  <a href="#" class="btn slider-btn">Подробнее</a>
+                  <table class="product-specification">
+                    <tr class="param-specification">
+                      <td>48 часов</td>
+                    </tr>
+                     <tr class="type-specification">
+                      <td>Без подзарядки</td>
+                    </tr>
+                  </table>
+                </figcaption>
+              </figure>
+            </div>
 
+            <div class="slide slide-3">
+              <figure>
+                <img src="img/slide-3.png" alt="квадрокоптер" width="526" height="334">
+                <figcaption class="slider-text">
+                  <p class="slider-slogan"><b>Порхает как бабочка, жалит как пчела!</b></p>
+                  <p class="slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                   <a href="#" class="btn slider-btn">Подробнее</a>
+                  <table class="product-specification">
+                    <tr class="param-specification">
+                      <td>800 м</td>
+                      <td>50 м</td>
+                    </tr>
+                     <tr class="type-specification">
+                      <td>Дальность полета</td>
+                      <td>Радиус поражения</td>
+                    </tr>
+                  </table>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </section>
 

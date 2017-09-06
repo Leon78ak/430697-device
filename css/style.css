@@ -375,9 +375,147 @@ ul.sub-menu-list {
 
 
 /*--slider--*/
+
+
 .promo-slider {
+  position: relative;
+
+  width: 1160px;
+  height: 500px;
+}
+
+
+.promo-slider::before {
+  content: "";
+
+  position: absolute;
+  z-index: -10;
+
+  width: 1160px;
+  height: 100%;
+
   background-image: linear-gradient(#f7e296 115px, #ffffff 115px);
-  background-clip: content-box;
+}
+
+
+.slider-wrapper {
+  position: relative;
+}
+
+.promo-slider input {
+  display: non;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 311px;
+  right: 80px;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 180px;
+  height: 40px;
+}
+
+.slider-controls label {
+  display: inline-block;
+
+  width: 12px;
+  height: 12px;
+  margin-left: 20px;
+
+  background-color: red;
+  border-radius: 50%;
+  vertical-align: top;
+  box-shadow: inset 0 0 0 1px #000000,
+              inset 0 0 0 4px #ffffff,
+              inset 0 0 0 5px #000000;
+  cursor: pointer;
+}
+
+
+
+.slider-slides {
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+#sld-1:checked ~ label[for="sld-1"] {
+  background-color: yellow;
+}
+
+
+
+.slide::before {
+  content: "";
+
+  position: absolute;
+  top: -20px;
+  right: 60px;
+
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 179px;
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.slide-1::before {
+  content: "01";
+}
+
+.slide-2::before {
+  content: "02";
+}
+
+.slide-3::before {
+  content: "03";
+}
+
+.slide figure {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.slider-pic {
+  width: 560px;
+  text-align: center;
+}
+
+.slider-text {
+  width: 560px;
+  margin-top: 80px;
+  margin-left: auto;
+}
+
+.slider-text p {
+  margin: 0;
+}
+
+p.slider-slogan {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.slider-slogan::before {
+  content: "";
+
+  position: absolute;
+  top: -38px;
+  left: 0;
+
+  width: 100px;
+  height: 7px;
+
+  background-color: #ffffff;
 }
 
 .slider-slogan b {
@@ -385,6 +523,65 @@ ul.sub-menu-list {
   font-size: 47px;
   font-weight: 800;
 }
+
+p.slider-description {
+  padding-right: 80px;
+  margin-bottom: 40px;
+
+  line-height: 30px;
+}
+
+table.product-specification {
+  padding-top: 55px;
+}
+
+.product-specification .param-specification {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.product-specification .type-specification {
+  font-size: 13px;
+  line-height: 20px;
+}
+s
+.product-specification tr {
+  display: flex;
+}
+
+tr.param-specification td,
+tr.type-specification td   {
+  margin-right: 40px;
+}
+
+
+
+#slide-2:checked ~ .slider-slides .slide-2 {
+  display: block;
+}
+
+#slide-1:checked ~ .slider-slides .slide-1 {
+  display: block;
+}
+
+#slide-3:checked ~ .slider-slides .slide:last-child {
+  display: block;
+}
+
+
+/*---для сетки---*/
+.slide figure > * {
+  outline: 1px solid red;
+}
+
+.slide figure > * > * {
+  outline: 1px solid blue;
+}
+
+
+
+
 
 .btn {
   position: relative;
@@ -400,6 +597,7 @@ ul.sub-menu-list {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #000000;
+  cursor: pointer;
 }
 
 .btn::before {
@@ -509,7 +707,6 @@ ul.sub-menu-list {
 /*--services--*/
 .services {
   position: relative;
-  color: #464646;
 }
 
 .services::before {
