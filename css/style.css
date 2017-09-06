@@ -707,6 +707,8 @@ tr.type-specification td   {
 /*--services--*/
 .services {
   position: relative;
+
+  margin-bottom: 94px;
 }
 
 .services::before {
@@ -872,6 +874,10 @@ label.btn {
 }
 
 /*--brands--*/
+.brands {
+  margin-bottom: 94px;
+}
+
 .brands-list {
   display: flex;
   justify-content: space-between;
@@ -886,6 +892,48 @@ label.btn {
   width: 260px;
 }
 
+.brands-link {
+  position: relative;
+}
+
+.brands-link::before {
+  content: "";
+
+  position: absolute;
+  top: -85px;
+  left: 0;
+  z-index: -1;
+
+  width: 260px;
+  height: 100px;
+
+  background-repeat: no-repeat;
+}
+
+.brands-link:hover::before,
+.brands-link:focus::before  {
+  z-index: 2;
+}
+
+
+.brands-link-1::before {
+  background-image: url("../img/brand-1.png");
+}
+
+.brands-link-2::before {
+  background-image: url("../img/brand-2.png");
+}
+
+.brands-link-3::before {
+  background-image: url("../img/brand-3.png");
+}
+
+.brands-link-4::before {
+  background-image: url("../img/brand-4.png");
+}
+
+
+
 /*--information--*/
 .index-columns {
   display: flex;
@@ -894,19 +942,88 @@ label.btn {
 
 .information,
 .contacts     {
+  position: relative;
+
   width: 560px;
+  margin-bottom: 82px;
+}
+
+.information h2,
+.contacts h2     {
+  padding-top: 52px;
+  margin-bottom: 40px;
+}
+
+.information h2::before,
+.contacts h2::before     {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #000000;
+}
+
+.information-text {
+  margin-bottom: 55px;
+}
+
+
+.information-text p,
+.contacts p          {
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .information-list {
   margin: 0;
+  padding: 0;
+  padding-top: 40px;
+
   list-style: none;
 
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 800;
+  line-height: 40px;
   color: #000000;
 }
 
+.information-list li {
+  position: relative;
+  padding-left: 35px;
+}
+
+.information-list li::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+
+  border: 2px solid #e6e6e6;
+  border-radius: 50%;
+  background-color: #ffffff;
+
+  transform: translateY(-50%);
+}
+
+.btn-info {
+  width: 260px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.map {
+  margin-bottom: 63px;
+}
 
 /*--footer--*/
 .page-footer {
