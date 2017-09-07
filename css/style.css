@@ -71,11 +71,11 @@ img {
 .header-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 
   margin-bottom: 32px;
   padding: 0 60px;
-  padding-top: 50px;
+  padding-top: 33px;
 }
 
 .header-top .logo-link {
@@ -372,18 +372,14 @@ ul.sub-menu-list {
   text-align: right;
 }
 
-
-
 /*--slider--*/
-
-
 .promo-slider {
   position: relative;
 
   width: 1160px;
   height: 500px;
+  margin-bottom: 94px;
 }
-
 
 .promo-slider::before {
   content: "";
@@ -397,13 +393,12 @@ ul.sub-menu-list {
   background-image: linear-gradient(#f7e296 115px, #ffffff 115px);
 }
 
-
 .slider-wrapper {
   position: relative;
 }
 
 .promo-slider input {
-/*  display: none;*/
+  display: none;
 }
 
 .slider-controls {
@@ -422,7 +417,7 @@ ul.sub-menu-list {
 
 .slider-controls label {
   display: inline-block;
-
+  display: block;
   width: 12px;
   height: 12px;
   margin-left: 20px;
@@ -430,27 +425,32 @@ ul.sub-menu-list {
   background-color: red;
   border-radius: 50%;
   vertical-align: top;
-/*
+
   box-shadow: inset 0 0 0 1px #000000,
               inset 0 0 0 4px #ffffff,
               inset 0 0 0 5px #000000;
-*/
   cursor: pointer;
 }
 
-
-
 .slider-slides {
   position: relative;
+}
+
+.slider-slides p {
+  margin: 0;
 }
 
 .slide {
   display: none;
 }
 
+.slide-1 {
+  display: block;
+}
 
-
-
+.slide-show {
+  display: block;
+}
 
 .slide::before {
   content: "";
@@ -505,7 +505,7 @@ p.slider-slogan {
   margin-bottom: 18px;
 }
 
-.slider-slogan::before {
+.slider-slogan::befo ;/re {
   content: "";
 
   position: absolute;
@@ -554,13 +554,14 @@ tr.param-specification td,
 tr.type-specification td   {
   margin-right: 40px;
 }
+*/
 
-#slide-1:checked ~ label[for="slide-1"] {
+#btn-6:checked~label[for="btn-6"] {
   background-color: yellow;
 }
 
-#slide-2:checked ~ .slider-slides .slide {
-  display: block;
+#slide-2:checked ~ .slider-slides  {
+  background-color: yellow;
 }
 
 
@@ -659,7 +660,6 @@ tr.type-specification td   {
 
 .popular-item {
   width: 160px;
-  margin-top: 40px;
   margin-right: 40px;
 }
 
@@ -736,7 +736,7 @@ tr.type-specification td   {
 
   width: 280px;
   padding-top: 115px;
-  padding-bottom: 140px;
+  padding-bottom: 110px;
 }
 
 label.btn {
@@ -982,6 +982,8 @@ label.btn {
 .contacts p          {
   margin: 0;
   margin-bottom: 25px;
+
+  line-height: 30px;
 }
 
 .information-list {
@@ -1238,6 +1240,10 @@ label.btn {
   background-color: #ffffff;
 }
 
+.modal-feedback-show {
+  display: block;
+}
+
 .modal-map {
   display: none;
 }
@@ -1375,6 +1381,7 @@ label.btn {
 .page-content-header {
   width: 1040px;
   padding: 0 80px;
+  padding-top: 32px;
   padding-bottom: 49px;
 }
 
@@ -1486,7 +1493,7 @@ label.btn {
 
 .filter fieldset {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 35px;
   padding: 0;
 
   border: none;
@@ -1500,15 +1507,17 @@ label.btn {
   color: #000000;
 }
 
-.filter-name {
+
+legend.filter-name {
   width: 100%;
-  padding-top: 15px;
+  padding: 0;
+  padding-top: 12px;
   margin-bottom: 25px;
   border-top: 2px solid #000000;
 }
 
-.filter-name:first-child {
-  margin-bottom: 36px;
+.filter-name:nth-child(1) {
+  margin-bottom: 35px;
 }
 
 .filter-option {
@@ -1524,7 +1533,7 @@ label.btn {
 .range-controls {
   position: relative;
 
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .range-scale {
@@ -1779,7 +1788,11 @@ ul.catalog-list {
   align-items: flex-start;
   width: 360px;
   margin-right: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
+}
+
+.catalog-item img {
+  display: block;
 }
 
 .catalog-item .actions {

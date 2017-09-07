@@ -11,7 +11,7 @@
 
     <header class="page-header container">
       <div class="header-top">
-        <a class="logo-link" name="top" tabindex="0">
+        <a class="logo-link" id="top-page" tabindex="0">
           <svg xmlns="http://www.w3.org/2000/svg" width="163" height="36" viewBox="0 0 164 36">
               <g class="logo-pic-header">
                 <title>Логотип интернет-магазина DEVICE</title>
@@ -175,6 +175,7 @@
               </figure>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -295,7 +296,7 @@
           <div class="map">
             <img src="img/map.jpg" alt="Офис компании по адресу г. Москва, ул. Строителей, 15" width="560" height="222">
           </div>
-          <a href="#" class="btn btn-info">Напишите нам</a>
+          <a href="#" class="btn btn-info btn-contacts">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -304,7 +305,7 @@
       <div class="container">
         <div class="page-footer-top">
           <div class="footer-row">
-            <a class="logo-link" href="#top">
+            <a class="logo-link" href="#top-page">
                 <svg xmlns="http://www.w3.org/2000/svg" width="163" height="36" viewBox="0 0 163 36">
                   <g class="logo-pic-footer">
                    <title>Логотип интернет-магазина DEVICE</title>
@@ -396,9 +397,57 @@
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <p>
-        <img src="img/map-bg.jpg" alt="Офис компании по адресу г. Москва, ул. Строителей, 15" widt еh="960" height="559">
+        <img src="img/map-bg.jpg" alt="Офис компании по адресу г. Москва, ул. Строителей, 15" width="960" height="559">
       </p>
       <button class="modal-close" type="button" title="Закрыть">Закрыть</button>
     </section>
+
+    <script>
+      var link = document.querySelector(".btn-contacts");
+      var popup = document.querySelector(".modal-feedback");
+      var close = document.querySelector(".modal-close");
+      var toggleSlide2 = document.querySelector("[for=slide-2]");
+      var slide2 = document.querySelector(".slide-2");
+
+
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-feedback-show");
+      });
+
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-feedback-show");
+      });
+
+      toggleSlide2lide2.addEventListener("click", function(event) {
+        event.preventDefault();
+        slide2.classList.add()
+      })
+    </script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
