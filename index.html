@@ -140,7 +140,7 @@
                   <img src="img/slide-2.png" alt="фитнес-браслет" width="345" height="485">
                 </p>
                 <figcaption class="slider-text">
-                  <p class="slider-slogan"><b>Худеем правильно!</b>
+                  <p class="slider-slogan"><b>Худеем<br/>правильно!</b>
                   </p>
                   <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету</p>
                   <a href="#" class="btn slider-btn">Подробнее</a>
@@ -379,20 +379,18 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form-layout-container">
-          <p class="feedback-item">
-            <label for="user-name">Ваше имя:</label>
-            <input type="text" id="user-name" name="user-name" placeholder="Представьтесь, пожалуйста" required>
-          </p>
-          <p class="feedback-item">
-            <label for="email">Ваш e-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Для отправки ответа" required>
-          </p>
-          <p class="feedback-item">
-            <label for="letter">Текст письма:</label>
-            <textarea id="letter" name="letter" rows="10" required>В свободной форме</textarea>
-          </p>
-        </div>
+        <p class="feedback-item">
+          <label for="user-name">Ваше имя:</label>
+          <input type="text" id="user-name" name="user-name" placeholder="Представьтесь, пожалуйста" required>
+        </p>
+        <p class="feedback-item">
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Для отправки ответа" required>
+        </p>
+        <p class="feedback-item">
+          <label for="letter">Текст письма:</label>
+          <textarea id="letter" name="letter" rows="10" required>В свободной форме</textarea>
+        </p>
         <button class="btn" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button" title="Закрыть">Закрыть</button>
@@ -407,14 +405,13 @@
     </section>
 
     <script>
-      var link = document.querySelector(".btn-contacts");
+      var contacts = document.querySelector(".btn-contacts");
       var popup = document.querySelector(".modal-feedback");
       var close = document.querySelector(".modal-close");
-      var toggleSlide2 = document.querySelector("[for=slide-2]");
-      var slide2 = document.querySelector(".slide-2");
 
 
-      link.addEventListener("click", function(event) {
+
+      contacts.addEventListener("click", function(event) {
         event.preventDefault();
         popup.classList.add("modal-feedback-show");
       });
@@ -424,10 +421,6 @@
         popup.classList.remove("modal-feedback-show");
       });
 
-      toggleSlide2lide2.addEventListener("click", function(event) {
-        event.preventDefault();
-        slide2.classList.add()
-      })
     </script>
   </body>
 </html>
