@@ -104,10 +104,6 @@ img {
   opacity: 0.6;
 }
 
-.header-search {
-
-}
-
 .search-form {
   font-size: 0;
 }
@@ -240,7 +236,7 @@ img {
   content: "";
 
   position: absolute;
-  left: 11px;
+  left: 5px;
   bottom: 4px;
 
   background-repeat: no-repeat;
@@ -327,7 +323,7 @@ img {
   display: none;
   width: 1100px;
   padding-top: 30px;
-  padding-bottom: 38px;
+  padding-bottom: 28px;
   padding-left: 60px;
 
   background-color: #f7e296;
@@ -403,7 +399,7 @@ ul.sub-menu-list {
 
 .slider-controls {
   position: absolute;
-  top: 311px;
+  top: 315px;
   right: 80px;
   z-index: 5;
 
@@ -417,7 +413,6 @@ ul.sub-menu-list {
 
 .slider-controls label {
   display: inline-block;
-  display: block;
   width: 12px;
   height: 12px;
   margin-left: 20px;
@@ -444,10 +439,6 @@ ul.sub-menu-list {
   display: none;
 }
 
-.slide-1 {
-  display: block;
-}
-
 .slide-show {
   display: block;
 }
@@ -456,8 +447,8 @@ ul.sub-menu-list {
   content: "";
 
   position: absolute;
-  top: -20px;
-  right: 60px;
+  top: -10px;
+  right: 50px;
 
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 179px;
@@ -485,12 +476,19 @@ ul.sub-menu-list {
   margin: 0;
 }
 
+.slide img {
+  margin-bottom: -4px;
+}
+
 .slider-pic {
   width: 560px;
   text-align: center;
 }
 
 .slider-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 560px;
   margin-top: 80px;
   margin-left: auto;
@@ -502,10 +500,10 @@ ul.sub-menu-list {
 
 p.slider-slogan {
   position: relative;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
-.slider-slogan::befo ;/re {
+.slider-slogan::before {
   content: "";
 
   position: absolute;
@@ -522,6 +520,7 @@ p.slider-slogan {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
   font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 p.slider-description {
@@ -532,7 +531,9 @@ p.slider-description {
 }
 
 table.product-specification {
-  padding-top: 55px;
+  width: 100%;
+  margin-top: 55px;
+  border-collapse: collapse;
 }
 
 .product-specification .param-specification {
@@ -550,29 +551,25 @@ table.product-specification {
   display: flex;
 }
 
+.param-specification {
+  margin-bottom: 10px;
+}
+
 tr.param-specification td,
 tr.type-specification td   {
-  margin-right: 40px;
-}
-*/
-
-#btn-6:checked~label[for="btn-6"] {
-  background-color: yellow;
+  margin-right: 80px;
+  padding: 0;
 }
 
-#slide-2:checked ~ .slider-slides  {
-  background-color: yellow;
-}
-
-
-
-/*
-#slide-3:checked ~ .slider-slides .slide:last-child {
+#slide-1:checked ~ .slider-wrapper .slider-slides .slide-1,
+#slide-2:checked ~ .slider-wrapper .slider-slides .slide-2,
+#slide-3:checked ~ .slider-wrapper .slider-slides .slide-3 {
   display: block;
 }
-*/
 
-
+#slide-2:checked ~ .slider-wrapper .slider-slides .slide-1 {
+  display: none;
+}
 
 
 /*---для сетки---*/
@@ -752,9 +749,9 @@ label.btn {
   transition-property: all;
 }
 
-#btn-1:checked ~ .services-list-controls label.btn[for="btn-1"],
-#btn-2:checked ~ .services-list-controls label.btn[for="btn-2"],
-#btn-3:checked ~ .services-list-controls label.btn[for="btn-3"]                    {
+#btn-1:checked ~ .services-list-controls .btn[for="btn-1"],
+#btn-2:checked ~ .services-list-controls .btn[for="btn-2"],
+#btn-3:checked ~ .services-list-controls .btn[for="btn-3"]                    {
   padding-right: 120px;
 
   color: #f7e184;
@@ -819,7 +816,7 @@ label.btn {
 
   position: absolute;
   top: 50%;
-  right: -236px;
+  right: -234px;
 
   width: 136px;
   height: 164px;
@@ -920,7 +917,6 @@ label.btn {
   z-index: 2;
 }
 
-
 .brands-link-1::before {
   background-image: url("../img/brand-1.png");
 }
@@ -951,11 +947,16 @@ label.btn {
 
   width: 560px;
   margin-bottom: 82px;
+  box-sizing: border-box;
+}
+
+.information {
+  padding-right: 100px;
 }
 
 .information h2,
 .contacts h2     {
-  padding-top: 52px;
+  padding-top: 45px;
   margin-bottom: 40px;
 }
 
@@ -974,9 +975,8 @@ label.btn {
 }
 
 .information-text {
-  margin-bottom: 55px;
+  margin-bottom: 40px;
 }
-
 
 .information-text p,
 .contacts p          {
@@ -986,10 +986,14 @@ label.btn {
   line-height: 30px;
 }
 
+.contacts p {
+  margin-bottom: 37px;
+}
+
 .information-list {
   margin: 0;
+  margin-bottom: 50px;
   padding: 0;
-  padding-top: 40px;
 
   list-style: none;
 
@@ -1149,7 +1153,6 @@ label.btn {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
   width: 160px;
 }
 
@@ -1210,11 +1213,9 @@ label.btn {
   box-sizing: border-box;
 
   width: 960px;
-/*
   max-height: 100vh;
 
   overflow: scroll;
-*/
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -1304,15 +1305,14 @@ label.btn {
 }
 
 
-.form-layout-container {
+.feedback-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 5px;
 }
 
-.feedback-item {
-  width: 360px;
+.feedback-form .feedback-item {
   margin: 0;
   margin-bottom: 35px;
 
@@ -1367,12 +1367,7 @@ label.btn {
   color: #000000;
 }
 
-.btn-modal-wrapper {
-  position: relative;
-}
-
 /*--inner-page--*/
-
 
 .inner-page .page-header {
   margin-bottom: 37px;
@@ -1475,6 +1470,7 @@ label.btn {
 
 .filter ul {
   margin: 0;
+  margin-top: 12px;
   padding: 0;
 }
 
@@ -1507,17 +1503,11 @@ label.btn {
   color: #000000;
 }
 
-
 legend.filter-name {
   width: 100%;
   padding: 0;
   padding-top: 12px;
-  margin-bottom: 25px;
   border-top: 2px solid #000000;
-}
-
-.filter-name:nth-child(1) {
-  margin-bottom: 35px;
 }
 
 .filter-option {
@@ -1533,6 +1523,7 @@ legend.filter-name {
 .range-controls {
   position: relative;
 
+  margin-top: 35px;
   margin-bottom: 10px;
 }
 
@@ -1629,7 +1620,7 @@ legend.filter-name {
   top: 50%;
   left: 0;
 
-  width: 23px;
+  width: 27px;
   height: 23px;
 
   background-repeat: no-repeat;
@@ -1660,8 +1651,8 @@ legend.filter-name {
 }
 
 .filter-input-radio + label::before {
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
 
   background-image: url("../img/svg-icons/radio-off.svg");
 }
@@ -1720,7 +1711,7 @@ button.btn {
 }
 
 .sort-item {
-  margin-right: 30px;
+  margin-right: 22px;
 }
 
 .sort-item a {
@@ -1756,6 +1747,7 @@ button.btn {
   width: 10px;
   height: 11px;
 
+  vertical-align: middle;
   background-repeat: no-repeat;
 }
 
@@ -1831,8 +1823,8 @@ p.catalog-item-image {
 
 .catalog-item-flag {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 30px;
+  right: 30px;
   z-index: 10;
 }
 
@@ -1894,6 +1886,10 @@ p.catalog-item-image {
 
 .pagination-item {
   margin-right: 32px;
+}
+
+.pagination-item-last-page {
+  margin-right: 0;
 }
 
 .pagination-item-prev {

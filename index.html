@@ -95,9 +95,9 @@
       <h1 class="visually-hidden">интернет-магазин гаджетов DEVICE</h1>
       <section class="promo-slider container">
         <h2 class="visually-hidden">промо-слайдер</h2>
-        <input type="radio" id="slide-1" name="tog" checked>
-        <input type="radio" id="slide-2" name="tog">
-        <input type="radio" id="slide-3" name="tog">
+        <input type="radio" id="slide-1" name="toggle" checked>
+        <input type="radio" id="slide-2" name="toggle">
+        <input type="radio" id="slide-3" name="toggle">
         <div class="slider-wrapper">
           <div class="slider-controls">
             <label for="slide-1"></label>
@@ -136,7 +136,9 @@
 
             <div class="slide slide-2">
               <figure>
-                <img src="img/slide-2.png" alt="фитнес-браслет" width="345" height="485">
+                <p class="slider-pic">
+                  <img src="img/slide-2.png" alt="фитнес-браслет" width="345" height="485">
+                </p>
                 <figcaption class="slider-text">
                   <p class="slider-slogan"><b>Худеем правильно!</b>
                   </p>
@@ -156,7 +158,9 @@
 
             <div class="slide slide-3">
               <figure>
-                <img src="img/slide-3.png" alt="квадрокоптер" width="526" height="334">
+                <p class="slider-pic">
+                  <img src="img/slide-3.png" alt="квадрокоптер" width="526" height="334">
+                </p>
                 <figcaption class="slider-text">
                   <p class="slider-slogan"><b>Порхает как бабочка, жалит как пчела!</b></p>
                   <p class="slider-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
@@ -218,9 +222,9 @@
       <section class="services">
         <h2 class="visually-hidden">сервисы</h2>
         <div class="container serices-column">
-          <input type="radio" id="btn-1" name="toggle" checked>
-          <input type="radio" id="btn-2" name="toggle">
-          <input type="radio" id="btn-3" name="toggle">
+          <input type="radio" id="btn-1" name="select" checked>
+          <input type="radio" id="btn-2" name="select">
+          <input type="radio" id="btn-3" name="select">
           <div class="services-list-controls">
             <label class="btn" for="btn-1">Доставка</label>
             <label class="btn" for="btn-2">Гарантия</label>
@@ -280,12 +284,12 @@
             </p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
             </p>
-            <ul class="information-list">
-              <li>Деловые линии</li>
-              <li>Автотрейдинг</li>
-              <li>ЖелДорЭкспедиция</li>
-            </ul>
           </div>
+          <ul class="information-list">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
           <a href="#" class="btn btn-info">Подробнее о нас</a>
         </section>
 
