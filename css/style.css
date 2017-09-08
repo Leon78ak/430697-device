@@ -511,10 +511,17 @@ ul.sub-menu-list {
   height: 12px;
   margin-left: 20px;
 
-  background-color: red;
+  background-color: #ffffff;
   border-radius: 50%;
   vertical-align: top;
 
+  box-shadow: inset 0 0 0 1px #000000;
+  cursor: pointer;
+}
+
+#slide-1:checked ~ .slider-wrapper label[for="slide-1"],
+#slide-2:checked ~ .slider-wrapper label[for="slide-2"],
+#slide-3:checked ~ .slider-wrapper label[for="slide-3"] {
   -webkit-box-shadow: inset 0 0 0 1px #000000,
               inset 0 0 0 4px #ffffff,
               inset 0 0 0 5px #000000;
@@ -522,7 +529,6 @@ ul.sub-menu-list {
           box-shadow: inset 0 0 0 1px #000000,
               inset 0 0 0 4px #ffffff,
               inset 0 0 0 5px #000000;
-  cursor: pointer;
 }
 
 .slider-slides {
@@ -537,7 +543,9 @@ ul.sub-menu-list {
   display: none;
 }
 
-.slide-show {
+#slide-1:checked ~ .slider-wrapper .slider-slides .slide-1,
+#slide-2:checked ~ .slider-wrapper .slider-slides .slide-2,
+#slide-3:checked ~ .slider-wrapper .slider-slides .slide-3 {
   display: block;
 }
 
@@ -571,9 +579,11 @@ ul.sub-menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+/*
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+*/
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -666,20 +676,10 @@ table.product-specification {
   margin-bottom: 10px;
 }
 
-tr.param-specification td,
-tr.type-specification td   {
-  margin-right: 80px;
+.param-specification td,
+.type-specification td   {
   padding: 0;
-}
-
-#slide-1:checked ~ .slider-wrapper .slider-slides .slide-1,
-#slide-2:checked ~ .slider-wrapper .slider-slides .slide-2,
-#slide-3:checked ~ .slider-wrapper .slider-slides .slide-3 {
-  display: block;
-}
-
-#slide-2:checked ~ .slider-wrapper .slider-slides .slide-1 {
-  display: none;
+  padding-right: 80px;
 }
 
 .param-specification td {
@@ -758,11 +758,8 @@ tr.type-specification td   {
           transform: translate(-50%, -50%);
 }
 
+.popular-link:active span,
 .popular-link:active svg {
-  opacity: 0.3;
-}
-
-.popular-link-virtual:active::before {
   opacity: 0.3;
 }
 
@@ -802,7 +799,7 @@ tr.type-specification td   {
   padding-bottom: 110px;
 }
 
-label.btn {
+.services-list-controls .btn {
   display: block;
   width: 160px;
   margin-bottom: 25px;
@@ -1247,23 +1244,18 @@ label.btn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: 500px;
+  align-items: center;
 }
 
 .page-footer-links::before {
   content: "";
 
   position: absolute;
-  top: 50%;
-  left: 0;
 
   width: 80px;
   height: 7px;
 
   background-color: #ffc600;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .page-footer-social {
@@ -1275,6 +1267,7 @@ label.btn {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 160px;
+  margin: 0 auto;
 }
 
 .social-link {
@@ -1310,7 +1303,7 @@ label.btn {
 
 .academy-link {
   display: block;
-  width: 26px;
+  width: 27px;
   height: 34px;
 
   background-image: url("../img/svg-icons/logo-html.svg");
@@ -1836,9 +1829,20 @@ button.btn {
   width: calc(50% + 252px);
 }
 
+.catalog > * > * > * {
+  outline: 1px solid yellow;
+}
+
 .catalog-wrapper {
   margin-right: calc(100% - 852px);
+  padding-right: 20px;
   padding-left: 72px;
+
+  outline: 1px solid black;
+}
+
+.catalog-header {
+  min-width: 872px;
 }
 
 .catalog-header,
@@ -1907,12 +1911,12 @@ button.btn {
 }
 
 .sort-item.sort-arrow-down {
-
+  margin-right: 0;
 }
 
 .sort-arrow a {
   display: inline-block;
-  width: 10px;
+  width: 11px;
   height: 11px;
 
   vertical-align: middle;
@@ -1959,6 +1963,10 @@ ul.catalog-list {
   width: 360px;
   margin-right: 40px;
   margin-bottom: 45px;
+}
+
+.caalog-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .catalog-item img {
@@ -2031,8 +2039,6 @@ p.catalog-item-image {
   padding-top: 170px;
 
   background-color: rgba(238, 238, 238, 0.7);
-  -webkit-box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.35);
-          box-shadow: 2px 3px 7px 0 rgba(0, 0, 0, 0.35);
 }
 
 .actions .btn {
