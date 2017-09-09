@@ -12,6 +12,100 @@
   font-style: normal;
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
 body {
   min-width: 1160px;
   margin: 0;
@@ -272,9 +366,13 @@ img {
   text-align: right;
 }
 
-.user-menu-item-enter {
-  width: 260px;
+.user-menu-item-login {
+  width: 180px;
   margin: auto;
+  text-align: left;
+}
+
+.user-menu-item-logout {
   text-align: left;
 }
 
@@ -298,7 +396,7 @@ img {
 
 .user-menu-link {
   position: relative;
-  padding-left: 35px;
+  padding-left: 30px;
 }
 
 .user-menu-link::before {
@@ -312,7 +410,31 @@ img {
   background-position: 0 0;
 }
 
-.enter-link::before {
+.user-menu-item-login {
+  max-width: 160px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.page-header .logout-link {
+  padding-left: 0;
+
+  opacity: 0.3;
+}
+
+.page-header .logout-link:hover,
+.page-header .logout-link:focus  {
+  opacity: 0.6;
+}
+
+.page-header .logout-link:active {
+  opacity: 1;
+}
+
+.login-link::before {
   width: 13px;
   height: 12px;
 
@@ -400,7 +522,7 @@ img {
   display: none;
   width: 1100px;
   padding-top: 30px;
-  padding-bottom: 28px;
+  padding-bottom: 30px;
   padding-left: 60px;
 
   background-color: #f7e296;
@@ -515,7 +637,9 @@ ul.sub-menu-list {
   border-radius: 50%;
   vertical-align: top;
 
-  box-shadow: inset 0 0 0 1px #000000;
+  -webkit-box-shadow: inset 0 0 0 1px #000000;
+
+          box-shadow: inset 0 0 0 1px #000000;
   cursor: pointer;
 }
 
@@ -1134,6 +1258,9 @@ table.product-specification {
   margin-bottom: 63px;
 }
 
+.map-link {
+  display: block;
+}
 /*--footer--*/
 .page-footer {
   min-width: 1200px;
@@ -1201,7 +1328,12 @@ table.product-specification {
   width: auto;
 }
 
-.page-footer .enter-link::before {
+.page-footer .user-menu-item-logout {
+  display: none;
+}
+
+.page-footer .login-link::before,
+.page-footer .logout-link::before {
   width: 13px;
   height: 12px;
 
@@ -1244,7 +1376,9 @@ table.product-specification {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .page-footer-links::before {
@@ -1328,31 +1462,26 @@ table.product-specification {
           box-sizing: border-box;
 
   width: 960px;
-  max-height: 100vh;
-
-  overflow: scroll;
-  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 
 .modal {
-  top: 50%;
+  display: none;
+
+  top: 100px;
   left: 50%;
 
-  -webkit-transform: translate(-50%, -50%);
 
-      -ms-transform: translate(-50%, -50%);
-
-          transform: translate(-50%, -50%);
+  width: 960px;
+  margin-left: -480px;
 }
+
 
 .modal p {
   margin: 0;
 }
 
 .modal-feedback {
-  display: none;
-
   padding-top: 95px;
   padding-right: 100px;
   padding-bottom: 80px;
@@ -1361,16 +1490,40 @@ table.product-specification {
   background-color: #ffffff;
 }
 
-.modal-feedback-show {
+.modal-show {
   display: block;
+
+  -webkit-animation-name: bounce;
+
+          animation-name: bounce;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
-.modal-map {
-  display: none;
+.modal-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .modal-map img {
   display: block;
+}
+
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
 }
 
 .modal-close {
@@ -1581,6 +1734,8 @@ table.product-specification {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+
+  min-width: 1200px;
 }
 
 .filters {
@@ -1701,7 +1856,10 @@ legend.filter-name {
 }
 
 .range-toggle:active {
-  border: 9px solid #ffffff;
+  -webkit-box-shadow: 0 0 0 1px #ffffff,
+              0 2px 1px 1px rgba(0, 1, 1, 0.2);
+          box-shadow: 0 0 0 1px #ffffff,
+              0 2px 1px 1px rgba(0, 1, 1, 0.2);
 }
 
 .range-toggle-min {
@@ -1829,16 +1987,10 @@ button.btn {
   width: calc(50% + 252px);
 }
 
-.catalog > * > * > * {
-  outline: 1px solid yellow;
-}
-
 .catalog-wrapper {
   margin-right: calc(100% - 852px);
   padding-right: 20px;
   padding-left: 72px;
-
-  outline: 1px solid black;
 }
 
 .catalog-header {
@@ -2152,4 +2304,16 @@ o
 .pagination-item-prev a:active,
 .pagination-item-next a:active  {
   opacity: 0.3;
+}
+
+.page-footer-inner-page .user-menu-item-login {
+  display: none;
+}
+
+.page-footer-inner-page .user-menu-item-logout {
+  display: block;
+}
+
+.user-logged {
+  display: block;
 }
