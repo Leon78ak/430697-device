@@ -1,13 +1,17 @@
- @font-face {
+@font-face {
   font-family: "Gilroy";
-  src: url("../font/gilroyextrabold.woff2") format("woff2");
+  src: url("../font/gilroyextrabold.woff2") format("woff2"),
+  url("../font/gilroyextrabold.woff")
+  format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../font/gilroylight.woff2") format("woff2");
+  src: url("../font/gilroylight.woff2") format("woff2"),
+  url("../font/gilroylight.woff")
+  format("woff");
   font-weight: 200;
   font-style: normal;
 }
@@ -703,11 +707,6 @@ ul.sub-menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-/*
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-*/
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -759,7 +758,7 @@ p.slider-slogan {
   background-color: #ffffff;
 }
 
-.slider-slogan b {
+.slider-slogan {
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
   font-weight: 800;
