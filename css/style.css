@@ -264,7 +264,12 @@ img {
   opacity: 0.6;
 }
 
+.header-search {
+  margin-right: auto;
+}
+
 .search-form {
+  display: flex;
   font-size: 0;
 }
 
@@ -300,6 +305,7 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 355px;
+  height: 48px;/*ie11*/
   padding-left: 40px;
   padding-right: 10px;
   background-color: transparent;
@@ -424,6 +430,7 @@ img {
 }
 
 .page-header .logout-link {
+  display: none;
   padding-left: 0;
 
   opacity: 0.3;
@@ -1734,7 +1741,7 @@ table.product-specification {
       -ms-flex-pack: center;
           justify-content: center;
 
-  min-width: 1200px;
+/*  min-width: 1200px;*/
 }
 
 .filters {
@@ -2310,9 +2317,5 @@ o
 }
 
 .page-footer-inner-page .user-menu-item-logout {
-  display: block;
-}
-
-.user-logged {
   display: block;
 }
