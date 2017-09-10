@@ -917,6 +917,27 @@ table.product-specification {
   background-image: linear-gradient(#ffffff 135px, #e5e5e5 135px);
 }
 
+
+.services::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -10;
+
+  width: 50%;
+  height: 100%;
+
+  background-image: -webkit-linear-gradient(#ffffff 135px, #e5e5e5 135px);
+
+  background-image: -o-linear-gradient(#ffffff 135px, #e5e5e5 135px);
+
+  background-image: linear-gradient(#ffffff 135px, #e5e5e5 135px);
+
+  transform: translateX(40px);
+}
+
 .services input[type="radio"] {
   display: none;
 }
